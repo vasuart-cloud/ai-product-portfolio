@@ -10,175 +10,7 @@
   <meta property="og:description" content="Agentic AI, enterprise product strategy and working AI prototypes. Explore my projects, impact, and career.">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Sreenivas Vinnakota | AI Product Manager &amp; Product Builder</title>
-  <style>
-    :root {
-      color-scheme: dark;
-      --bg:#08111f; --surface:#101e30; --surface2:#14253a; --line:#284056;
-      --text:#eaf3fb; --muted:#a2b6ca; --accent:#5fe1d0; --blue:#80b5ff; --white:#ffffff;
-      --max:1160px; --radius:18px;
-    }
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; scroll-padding-top:92px; }
-    body { background:var(--bg); color:var(--text); margin:0; font:16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Arial, sans-serif; }
-    body::before { content:""; position:absolute; z-index:-1; inset:0 0 auto; height:840px; pointer-events:none;
-      background: radial-gradient(ellipse 50% 55% at 73% 20%,rgba(40,132,186,.21),transparent 70%), radial-gradient(ellipse 42% 54% at 15% 3%,rgba(45,181,154,.13),transparent 70%); }
-    a { color:inherit; text-underline-offset:3px; }
-    a:hover { color:var(--accent); }
-    :focus-visible { outline:3px solid var(--accent); outline-offset:4px; border-radius:4px; }
-    img { max-width:100%; height:auto; display:block; }
-    .container { width:min(var(--max),calc(100% - 44px)); margin-inline:auto; }
-    .skip { position:absolute; left:12px; top:-100px; padding:10px 15px; z-index:99; background:var(--white); color:#061120; }
-    .skip:focus { top:10px; }
-    .topbar { position:sticky; top:0; z-index:20; backdrop-filter:blur(18px); background:rgba(8,17,31,.90); border-bottom:1px solid rgba(124,170,195,.17); }
-    .nav { height:76px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
-    .brand { display:flex; gap:12px; align-items:center; text-decoration:none; font-weight:800; letter-spacing:-.02em; white-space:nowrap; }
-    .logo { display:grid; place-items:center; width:39px; height:39px; background:linear-gradient(135deg,#53d6c6,#5699ff); color:#071321; border-radius:12px; font-weight:900; letter-spacing:-.07em; }
-    .navlinks { display:flex; align-items:center; gap:23px; }
-    .navlinks a { font-size:.88rem; text-decoration:none; color:#c6d9e6; font-weight:600; }
-    .navlinks a:hover { color:var(--accent); }
-    .mini-contact { border:1px solid #3d7b83; padding:10px 15px; border-radius:12px; }
-    .hero { padding:100px 0 84px; display:grid; grid-template-columns:1.24fr .76fr; align-items:center; gap:52px; }
-    .eyebrow { display:inline-flex; align-items:center; gap:10px; color:var(--accent); font-size:.78rem; font-weight:800; letter-spacing:.13em; text-transform:uppercase; }
-    .dot { display:inline-block; width:8px; height:8px; border-radius:50%; background:var(--accent); box-shadow:0 0 0 5px rgba(95,225,208,.1); }
-    h1,h2,h3,h4,p { margin-top:0; }
-    h1 { margin:22px 0 13px; font-size:clamp(3rem,5.4vw,5.3rem); line-height:1.06; letter-spacing:-.055em; }
-    .gradient-text { color:var(--accent); }
-    .hero-role { font-size:1.3rem; color:#c7d9e8; font-weight:650; letter-spacing:-.017em; margin-bottom:16px; }
-    .lede { max-width:655px; color:var(--muted); font-size:1.08rem; line-height:1.85; }
-    .buttons { display:flex; gap:12px; flex-wrap:wrap; margin:28px 0 24px; }
-    .btn { display:inline-flex; align-items:center; justify-content:center; gap:9px; padding:12px 18px; border:1px solid #456277; border-radius:11px; text-decoration:none; font-weight:750; font-size:.91rem; background:#152638; color:#e8f4fc; transition:transform .17s, background .17s; }
-    .btn:hover { transform:translateY(-2px); color:#061321; background:var(--accent); border-color:var(--accent); }
-    .btn.primary { background:var(--accent); border-color:var(--accent); color:#051d25; }
-    .btn.primary:hover { background:#b4fff2; }
-    .btn.secondary { background:transparent; }
-    .hero-meta { display:flex; align-items:center; flex-wrap:wrap; gap:13px 22px; color:#97b2c9; font-size:.9rem; }
-    .hero-meta span { display:inline-flex; gap:7px; align-items:center; }
-    .profile-card { padding:29px; border-radius:27px; border:1px solid #294c60; background:linear-gradient(142deg,#18334a,#101d2c 66%,#14253d); box-shadow:0 35px 90px rgba(0,0,0,.22); }
-    .photo-wrap { width:min(100%,285px); aspect-ratio:1; margin:8px auto 24px; position:relative; border-radius:50%; border:8px solid #203c55; box-shadow:0 0 0 2px #3b7a88,0 20px 50px rgba(0,0,0,.30); overflow:hidden; display:grid; place-items:center; background:linear-gradient(145deg,#245067,#1d2f4b); }
-    .photo-wrap::before { content:"SV"; position:absolute; font-size:5.2rem; font-weight:800; color:#82d8db; }
-    .photo-wrap img { width:100%; height:100%; object-fit:cover; position:relative; }
-    .profile-card h2 { text-align:center; font-size:1.38rem; margin:0 0 3px; letter-spacing:-.02em; }
-    .profile-card .role { color:var(--accent); font-size:.92rem; text-align:center; margin:0 0 14px; }
-    .profile-card .quote { text-align:center; margin:0; font-size:.91rem; color:#acc4d5; }
-    .stats { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin:0 auto 102px; }
-    .stat { padding:25px 23px; background:#111f31; border:1px solid #243a51; border-radius:15px; }
-    .stat strong { display:block; color:var(--accent); letter-spacing:-.04em; line-height:1.2; font-size:2.1rem; }
-    .stat span { display:block; margin-top:8px; color:#afc2d2; font-size:.83rem; }
-    .stat small { display:block; color:#819db3; margin-top:5px; font-size:.72rem; }
-    section { padding-block:42px; }
-    .section-head { max-width:820px; margin-bottom:32px; }
-    .kicker { color:var(--accent); font-size:.78rem; font-weight:800; letter-spacing:.12em; text-transform:uppercase; margin:0 0 10px; }
-    .section-head h2 { font-size:clamp(2rem,3.3vw,3.1rem); line-height:1.17; letter-spacing:-.045em; margin-bottom:11px; }
-    .section-head p { color:var(--muted); font-size:1rem; line-height:1.8; }
-    .card { background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); }
-    .featured { overflow:hidden; }
-    .project-media { overflow:hidden; background:#0e1c31; border-bottom:1px solid #294258; }
-    .project-media img { width:100%; aspect-ratio:2/1; object-fit:cover; object-position:center 36%; }
-    .feature-body { padding:30px; }
-    .pills { display:flex; gap:9px; flex-wrap:wrap; margin-bottom:13px; }
-    .pill { display:inline-block; font-size:.76rem; font-weight:750; color:#acd2f5; border:1px solid #315276; background:#172b43; padding:5px 10px; border-radius:99px; }
-    .pill.mint { color:#9bf2e2; background:rgba(29,110,103,.23); border-color:#2e706d; }
-    .feature-body h3 { font-size:clamp(1.65rem,2.65vw,2.45rem); margin-bottom:12px; line-height:1.15; letter-spacing:-.03em; }
-    .feature-body .intro { color:#b8cddd; max-width:940px; font-size:1rem; }
-    .three-col { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin:23px 0; }
-    .info { border:1px solid #2a4158; border-radius:13px; padding:18px; background:#112338; }
-    .info h4 { margin-bottom:7px; font-size:1rem; color:#b0f1e8; }
-    .info p { margin:0; color:#aabfd0; font-size:.89rem; }
-    .feature-body h4.subhead { font-size:1.07rem; margin:27px 0 14px; }
-    .agent-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:11px; margin-top:8px; }
-    .agent { background:linear-gradient(160deg,#1a3550,#15273b); border:1px solid #3a5971; border-radius:12px; padding:16px; }
-    .agent .step { width:30px; height:30px; display:grid; place-items:center; border-radius:8px; background:#284b58; color:#91eee0; font-size:.85rem; font-weight:850; margin-bottom:10px; }
-    .agent h5 { margin:0 0 6px; font-size:.88rem; }
-    .agent p { margin:0; font-size:.8rem; color:#a4bdd2; line-height:1.6; }
-    .note { margin:19px 0 0; color:#a6c5d4; padding:13px 16px; background:#102738; border-left:3px solid var(--accent); border-radius:0 8px 8px 0; font-size:.87rem; }
-    .project-actions { margin-top:25px; display:flex; gap:12px; flex-wrap:wrap; }
-    .project-actions .btn { min-width:165px; }
-    .smallcaps { font-size:.78rem; font-weight:800; text-transform:uppercase; letter-spacing:.09em; color:#6dddcf; }
-    .other-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
-    .other { padding:24px; }
-    .other h3 { margin:12px 0 9px; font-size:1.16rem; letter-spacing:-.02em; }
-    .other p { color:#a7bed0; font-size:.9rem; margin-bottom:16px; }
-    .other .tag { color:#8bf0dd; font-size:.75rem; font-weight:700; letter-spacing:.08em; }
-    .other .links { margin-top:15px; display:flex; gap:12px; flex-wrap:wrap; font-size:.83rem; }
-    .text-link { color:#8ecaff; font-weight:750; text-decoration:none; }
-    .about-grid { display:grid; grid-template-columns:1.1fr .9fr; gap:18px; }
-    .about-box { padding:29px; }
-    .about-box p { color:#b5c9d8; }
-    .about-box p:last-child { margin-bottom:0; }
-    .skill-items { display:flex; flex-wrap:wrap; gap:9px; margin-top:10px; }
-    .skill-items span { border:1px solid #365067; background:#152a40; border-radius:9px; padding:7px 10px; font-size:.81rem; color:#b9d7e8; }
-    .timeline { display:grid; gap:15px; }
-    .job { display:grid; grid-template-columns:205px 1fr; gap:20px; padding:26px; }
-    .job-period { color:var(--accent); font-size:.8rem; font-weight:800; padding-top:3px; }
-    .job h3 { font-size:1.17rem; line-height:1.35; margin:0 0 4px; }
-    .job .company { color:#9fc2d8; font-size:.88rem; margin-bottom:12px; }
-    .job ul { margin:0; padding-left:18px; color:#b1c7d7; font-size:.9rem; }
-    .job li + li { margin-top:6px; }
-    .education-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; }
-    .edu { padding:25px; }
-    .edu .years { color:var(--accent); font-size:.83rem; font-weight:750; }
-    .edu h3 { margin:7px 0 6px; font-size:1.21rem; }
-    .edu p { color:var(--muted); margin:0; font-size:.91rem; }
-    .cert-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:13px; }
-    .cert { padding:17px 20px; display:flex; gap:14px; align-items:flex-start; }
-    .cert .check { flex:0 0 24px; width:24px; height:24px; display:grid; place-items:center; background:#204638; border:1px solid #377f65; color:#9effd6; border-radius:50%; font-size:.79rem; font-weight:bold; }
-    .cert strong { display:block; font-size:.92rem; font-weight:750; line-height:1.45; }
-    .cert small { display:block; color:#a1b8cb; margin-top:3px; }
-    .awards { display:flex; gap:13px; flex-wrap:wrap; }
-    .award { flex:1; min-width:220px; padding:24px; }
-    .award h3 { color:#f7d998; font-size:1.1rem; margin:7px 0; }
-    .award p { color:#b4c7d5; font-size:.89rem; margin:0; }
-    .contact-card { margin-top:10px; padding:44px; display:flex; align-items:center; justify-content:space-between; gap:28px; background:linear-gradient(120deg,#123342,#132138 72%); }
-    .contact-card h2 { font-size:clamp(1.8rem,3vw,2.65rem); letter-spacing:-.04em; margin:0 0 9px; }
-    .contact-card p { max-width:560px; color:#aecbdc; margin:0; }
-    .contact-card .buttons { margin:0; }
-    footer { margin-top:70px; border-top:1px solid #294057; padding:30px 0 40px; }
-    .footer-grid { display:flex; justify-content:space-between; flex-wrap:wrap; gap:15px; color:#92a9be; font-size:.83rem; }
-    .footer-grid a { text-decoration:none; }
-
-    /* Autonomous Sourcing Agent — public case study */
-    .sourcing-feature { margin-top:25px; scroll-margin-top:98px; }
-    .sourcing-banner { padding:34px 34px 30px; background:linear-gradient(125deg,#0e3040 0%,#16273f 58%,#1b2c49 100%); border-bottom:1px solid #355369; }
-    .sourcing-banner-top { display:flex; justify-content:space-between; flex-wrap:wrap; align-items:center; gap:18px; margin-bottom:26px; }
-    .sourcing-banner .kicker { margin:0; }
-    .sourcing-banner-top .pill { margin:0; }
-    .sourcing-banner h3 { font-size:clamp(1.55rem,3vw,2.65rem); line-height:1.18; letter-spacing:-.04em; margin-bottom:8px; }
-    .sourcing-banner .summary { color:#bad5e1; margin:0 0 25px; max-width:850px; font-size:1rem; }
-    .sourcing-flow { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; }
-    .sourcing-node { position:relative; padding:15px 16px; border:1px solid rgba(101,205,205,.34); border-radius:12px; background:rgba(6,20,35,.45); }
-    .sourcing-node:not(:last-child)::after { content:'→'; position:absolute; top:50%; right:-11px; transform:translateY(-50%); color:#90e5d8; font-size:1.3rem; z-index:1; font-weight:800; }
-    .sourcing-node small { color:var(--accent); display:block; font-size:.71rem; font-weight:850; letter-spacing:.08em; text-transform:uppercase; margin-bottom:4px; }
-    .sourcing-node strong { font-size:.94rem; line-height:1.3; display:block; }
-    .sourcing-node span { font-size:.77rem; color:#a8c4d4; line-height:1.5; display:block; margin-top:4px; }
-    .sourcing-gates { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:11px; margin:14px 0 24px; }
-    .sourcing-gate { display:flex; align-items:flex-start; gap:10px; background:#172a3e; padding:15px; border:1px solid #355168; border-radius:12px; }
-    .sourcing-gate .gate-number { font-size:.73rem; font-weight:900; color:#072525; background:#79e6d9; flex-shrink:0; border-radius:7px; padding:4px 7px; }
-    .sourcing-gate strong { display:block; font-size:.88rem; }
-    .sourcing-gate p { margin:3px 0 0; color:#a5bccf; font-size:.8rem; line-height:1.5; }
-    .sourcing-bottom { background:#102438; border:1px solid #27445b; padding:17px 19px; border-radius:12px; margin:20px 0 0; }
-    .sourcing-bottom h4 { margin:0 0 6px; color:#c8fff4; }
-    .sourcing-bottom p { margin:0; color:#aac6d7; font-size:.9rem; }
-    .sourcing-metric { display:flex; flex-wrap:wrap; gap:10px; margin:15px 0 0; }
-    .sourcing-metric span { color:#a8d8ef; background:#132c45; border:1px solid #2d5268; border-radius:9px; font-size:.79rem; padding:6px 10px; }
-    @media(max-width:760px) { .sourcing-flow { grid-template-columns:repeat(2,1fr); } .sourcing-node::after { display:none; } .sourcing-gates { grid-template-columns:1fr; } .sourcing-banner { padding:25px 20px; } }
-    @media(max-width:460px) { .sourcing-flow { grid-template-columns:1fr; } }
-    @media(max-width:950px) { .hero { gap:32px; } .navlinks { gap:12px; } .stat { padding:18px; } .agent-grid { grid-template-columns:repeat(2,1fr); } }
-    @media(max-width:760px) {
-      .nav { height:auto; min-height:70px; padding:14px 0; flex-wrap:wrap; }
-      .brand { font-size:.95rem; }
-      .navlinks { width:100%; overflow-x:auto; gap:17px; padding-bottom:3px; }
-      .navlinks a { font-size:.8rem; white-space:nowrap; }
-      .hero { grid-template-columns:1fr; padding:55px 0 45px; }
-      .profile-card { max-width:450px; width:100%; margin:auto; }
-      .stats { grid-template-columns:repeat(2,1fr); margin-bottom:55px; }
-      .three-col,.other-grid,.about-grid,.education-grid,.cert-grid { grid-template-columns:1fr; }
-      .job { grid-template-columns:1fr; gap:6px; padding:20px; }
-      .contact-card { flex-direction:column; align-items:flex-start; padding:28px; }
-    }
-    @media(max-width:460px) { .container { width:min(var(--max),calc(100% - 28px)); } h1 { font-size:3rem; } .hero-meta { font-size:.8rem; } .agent-grid { grid-template-columns:1fr; } .feature-body { padding:20px; } .stat strong { font-size:1.6rem; } .buttons .btn { flex:1; } .profile-card { padding:22px; } }
-    @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .btn { transition:none; } }
-    @media print { .topbar,.buttons,.skip { display:none; } body { background:#fff; color:#111; } section,.card { break-inside:avoid; } }
-  </style>
+  <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -226,93 +58,56 @@
 
     <section class="container" id="projects">
       <div class="section-head">
-        <p class="kicker">01 / Featured projects</p>
-        <h2>Explore what I've built and how I think.</h2>
-        <p>From a hands-on AI prototype to enterprise products, this portfolio highlights the user problems, strategic choices, agentic workflows, and measurable outcomes behind my work.</p>
+        <p class="kicker">01 / Featured case studies</p>
+        <h2>Real problems. Product decisions. Governed AI.</h2>
+        <p>Detailed case studies covering problem discovery, experience design, agent architecture, MVP prioritization, evaluation plans and interactive prototypes. My enterprise procurement work leads the portfolio.</p>
       </div>
-      <article class="card featured" aria-labelledby="aer-title">
-        <div class="project-media"><img src="assets/agentic-employee-records-cover.webp" alt="Cover of the Agentic Employee Records product review presentation" width="1392" height="783" loading="lazy"></div>
-        <div class="feature-body">
-          <div class="pills"><span class="pill mint">Working prototype + product review</span><span class="pill">Agentic AI</span><span class="pill">HR Operations / Compliance</span><span class="pill">Zero-to-one product thinking</span></div>
-          <h3 id="aer-title">Agentic Employee Records</h3>
-          <p class="intro"><strong>Product vision:</strong> an AI-governed employee-record compliance and evidence automation layer for high-churn, labor-heavy workforces. Instead of another document repository, the concept focuses on detecting file gaps, explaining why they matter, guiding human-reviewed remediation, and making audit evidence defensible.</p>
-          <div class="three-col">
-            <div class="info"><h4>Business problem</h4><p>Employee evidence is scattered across HRMS, document stores, and email. Manual reviews, missed expiries, unclear rule versions, and audit preparation create avoidable operational risk.</p></div>
-            <div class="info"><h4>Primary personas</h4><p>HR Operations Managers need speed; Compliance Administrators need rules, approvals, and traceability; VPs of HR and CHROs need audit-readiness and ROI evidence.</p></div>
-            <div class="info"><h4>My contribution</h4><p>Developed the product review and prototype experience, including problem framing, personas, solution strategy, agent roles, governance, phased roadmap, metrics, validation and GTM hypotheses.</p></div>
-          </div>
-          <h4 class="subhead">Proposed MVP architecture · four bounded agents</h4>
-          <div class="agent-grid" aria-label="Proposed agent design">
-            <div class="agent"><div class="step">01</div><h5>Ingestion Agent</h5><p>Connect to document sources, classify records, and map supporting evidence to employee files.</p></div>
-            <div class="agent"><div class="step">02</div><h5>Compliance Agent</h5><p>Evaluate completeness against policies; surface confidence, severity, and applicable rule versions.</p></div>
-            <div class="agent"><div class="step">03</div><h5>Remediation Agent</h5><p>Draft follow-ups and tasks, route approval, and track remediation SLAs and exceptions.</p></div>
-            <div class="agent"><div class="step">04</div><h5>Audit Agent</h5><p>Explain why records were flagged and compile source links and action history for reviews.</p></div>
-          </div>
-          <h4 class="subhead">Product principles &amp; validation approach</h4>
-          <div class="three-col">
-            <div class="info"><h4>Explain before acting</h4><p>Expose the source, rule, confidence, and evidence behind each finding. Maintain human approval before external communication or closure.</p></div>
-            <div class="info"><h4>Earn trust through metrics</h4><p>Measure confirmed findings, false positives, time to resolve, SLA breaches, and verified complete employee files.</p></div>
-            <div class="info"><h4>Validate before scaling</h4><p>Product-review recommendation: pursue 2–5 paid design partners and test trust, operational ROI, and buyer willingness to pay before full-scale development.</p></div>
-          </div>
-          <p class="note"><strong>Project status:</strong> The live URL opens an interactive prototype. The agent architecture, integrations, metrics, roadmap, pricing, and GTM details in the presentation are product proposals or validation targets—not claims that those capabilities are production-deployed or that those targets have been achieved.</p>
-          <div class="project-actions">
-            <a class="btn primary" href="https://agentic-employee-record.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Try Agentic Employee Records live prototype (opens new tab)">↗ Try the live prototype</a>
-            <a class="btn" href="assets/agentic-employee-records-product-review.pdf" target="_blank" rel="noopener noreferrer" aria-label="View Agentic Employee Records presentation (PDF opens in new tab)">▤ View product presentation</a>
-            <a class="btn secondary" href="https://github.com/vasuart-cloud/Agentic-Employee-Record" target="_blank" rel="noopener noreferrer">⌘ View GitHub project</a>
-          </div>
-        </div>
-      </article>
-
       <article class="card featured sourcing-feature" id="autonomous-sourcing" aria-labelledby="sourcing-title">
         <div class="sourcing-banner">
           <div class="sourcing-banner-top">
-            <p class="kicker">Featured project 02 / Enterprise procurement AI</p>
-            <span class="pill mint">Product concept &amp; prototype exploration</span>
+            <p class="kicker">Case study 01 · Enterprise Procurement AI</p>
+            <span class="pill mint">Product concept + interactive simulated walkthrough</span>
           </div>
           <h3 id="sourcing-title">Autonomous Sourcing Agent</h3>
-          <p class="summary">Making competitive sourcing practical for low-value, high-volume purchases — by automating sourcing administration while keeping procurement decisions and controls with people.</p>
-          <div class="sourcing-flow" aria-label="Proposed workflow: capture the request, build sourcing event, run the event, recommend an award">
-            <div class="sourcing-node"><small>01 · Capture</small><strong>Understand the need</strong><span>Conversational intake and policy check</span></div>
-            <div class="sourcing-node"><small>02 · Draft</small><strong>Prepare the event</strong><span>Past purchase context and suppliers</span></div>
-            <div class="sourcing-node"><small>03 · Execute</small><strong>Run sourcing</strong><span>Publish, collect and normalize quotes</span></div>
-            <div class="sourcing-node"><small>04 · Decide</small><strong>Explain the award</strong><span>Ranked options with cited evidence</span></div>
+          <p class="summary">Making competitive sourcing feasible for the low-value, high-volume purchases that buyers often cannot afford to source manually.</p>
+          <div class="sourcing-flow" aria-label="Proposed agent flow">
+            <div class="sourcing-node"><small>01 · Discover</small><strong>Intake &amp; Policy</strong><span>Identify need, constraints and routing</span></div>
+            <div class="sourcing-node"><small>02 · Design</small><strong>Category &amp; Supplier</strong><span>Reuse purchase history and suggest vendors</span></div>
+            <div class="sourcing-node"><small>03 · Execute</small><strong>Event Agent</strong><span>Run RFQ and collect comparable quotes</span></div>
+            <div class="sourcing-node"><small>04 · Decide</small><strong>Evaluation &amp; Award</strong><span>Explain ranking; buyer makes the award</span></div>
           </div>
         </div>
         <div class="feature-body">
-          <div class="pills"><span class="pill">Tail-spend sourcing</span><span class="pill">Multi-agent orchestration</span><span class="pill">Human-in-the-loop</span><span class="pill">Procurement AI</span><span class="pill">AI governance</span></div>
-          <p class="intro"><strong>Product opportunity:</strong> Many small purchasing requests never go through a competitive sourcing event. They require much of the same manual effort as larger purchases, so procurement teams prioritize high-value events and often accept familiar suppliers and unchallenged prices. This concept turns the routine steps of sourcing into an agent-led workflow, while a buyer still approves the decision.</p>
+          <div class="pills"><span class="pill">Tail-spend sourcing</span><span class="pill">4-agent workflow</span><span class="pill">3 human approvals</span><span class="pill">Enterprise governance</span></div>
+          <p class="intro"><strong>The problem:</strong> Buyers spend time on repetitive event administration—writing specifications, finding suppliers, collecting inconsistent quotes, and documenting awards. Many smaller requisitions consequently bypass competition. <strong>The approach:</strong> an evidence-first, Level 2 supervised agent workflow embedded in procurement, with configurable boundaries and mandatory human decisions.</p>
           <div class="three-col">
-            <div class="info"><h4>The pain point</h4><p>Buyers chase missing requirements, re-enter specifications, find suppliers, create RFQs, follow up on responses and manually compare inconsistent quotes. Fragmented demand and undocumented decisions compound the problem.</p></div>
-            <div class="info"><h4>Who it serves</h4><p>Tactical buyers want to source more requests with fewer touches. Customer administrators need safe configuration and oversight. Procurement leaders need more spend under management and defensible awards.</p></div>
-            <div class="info"><h4>My product contribution</h4><p>Developed the product concept, problem framing, buyer journeys, requirements, agent responsibilities, approval model, evaluation strategy, proposed roadmap and success metrics.</p></div>
+            <div class="info"><h4>Product discovery</h4><p>Buyer, customer-administrator and procurement-leader needs; fragmented demand, administrative overhead and auditability.</p></div>
+            <div class="info"><h4>Architecture &amp; MVP</h4><p>Four specialized agents, customer-governed rules, versioned evaluations and three mandatory approval gates.</p></div>
+            <div class="info"><h4>Measuring success</h4><p>Competitively sourced tail spend per active buyer, buyer touches, trust in evidence, overrides and quote quality.</p></div>
           </div>
-          <h4 class="subhead" id="sourcing-solution">Proposed solution · four specialized agents</h4>
-          <div class="agent-grid" aria-label="Autonomous Sourcing Agent proposed architecture">
-            <div class="agent"><div class="step">01</div><h5>Intake &amp; Policy Agent</h5><p>Interprets a conversational request, fills gaps and checks contracts, catalog options and routing policies.</p></div>
-            <div class="agent"><div class="step">02</div><h5>Category &amp; Supplier Agent</h5><p>Drafts specifications from relevant purchase history, identifies categories and recommends suppliers with reasons.</p></div>
-            <div class="agent"><div class="step">03</div><h5>Event Agent</h5><p>Prepares and monitors sourcing events, follows up for bids, and brings emailed quotes into one comparison.</p></div>
-            <div class="agent"><div class="step">04</div><h5>Evaluation &amp; Award Agent</h5><p>Compares bids against approved criteria and produces an explainable, evidence-linked award recommendation.</p></div>
-          </div>
-          <h4 class="subhead">Designed for supervised autonomy · three human approval gates</h4>
-          <div class="sourcing-gates" aria-label="Three proposed mandatory approval points">
-            <div class="sourcing-gate"><span class="gate-number">GATE 1</span><div><strong>Confirm the requirement</strong><p>The buyer reviews the item description and category before proceeding.</p></div></div>
-            <div class="sourcing-gate"><span class="gate-number">GATE 2</span><div><strong>Authorize the event</strong><p>The buyer approves suppliers and event details before outreach.</p></div></div>
-            <div class="sourcing-gate"><span class="gate-number">GATE 3</span><div><strong>Make the award</strong><p>A named human confirms or overrides the recommendation with a reason.</p></div></div>
-          </div>
-          <div class="three-col">
-            <div class="info"><h4>Evidence over black-box AI</h4><p>Show why one supplier outranks another, with traceable quotes, scoring criteria, exclusions and a recorded human decision — not an unsupported recommendation.</p></div>
-            <div class="info"><h4>Customer-controlled guardrails</h4><p>Use defined spend thresholds, scoring weights, supplier policies and approval routing. Test proposed changes with replay and scenario evaluations before publication.</p></div>
-            <div class="info"><h4>A deliberately narrow MVP</h4><p>Start with repeatable indirect tail-spend categories. Keep automated awards, negotiation and direct strategic sourcing out of the initial supervised scope.</p></div>
-          </div>
-          <div class="sourcing-bottom">
-            <h4>How I would measure product success</h4>
-            <p><strong>North-star metric:</strong> competitively sourced tail spend per active buyer. Supporting signals: buyer effort per event, request-to-event time, repeat usage, quote coverage, award acceptance and overrides, and how often buyers inspect supporting evidence.</p>
-            <div class="sourcing-metric"><span>Spend coverage</span><span>Time and buyer touches</span><span>Award trust and overrides</span><span>Evidence quality</span></div>
-          </div>
-          <p class="note"><strong>Project status &amp; disclosure:</strong> This is a generalized public case study of a proposed product approach and prototype exploration, <em>not</em> a claim of a live autonomous procurement service or measured pilot results. Detailed internal requirements and leadership materials are not published here. No public demo URL has been provided for this project.</p>
+          <p class="note"><strong>Status:</strong> This is an exploration of a proposed product and an illustrative browser-only prototype—not an assertion of production deployment or achieved sourcing savings. The detailed internal requirements and leadership materials are not published here.</p>
           <div class="project-actions">
-            <a class="btn primary" href="mailto:sreenivas.vinnakota1@gmail.com?subject=Autonomous%20Sourcing%20Agent%20portfolio%20discussion">↗ Discuss this case study</a>
-            <a class="btn secondary" href="#sourcing-solution">Explore the agent approach ↑</a>
+            <a class="btn primary" href="projects/autonomous-sourcing-agent/">Read complete case study ↗</a>
+            <a class="btn" href="projects/autonomous-sourcing-agent/prototype.html">Try simulated sourcing walkthrough ↗</a>
+          </div>
+        </div>
+      </article>
+      <article class="card featured" id="agentic-employee-records" aria-labelledby="aer-title" style="margin-top:25px">
+        <div class="project-media"><img src="assets/agentic-employee-records-cover.webp" alt="Cover artwork for the Agentic Employee Records product review" width="1392" height="783" loading="lazy"></div>
+        <div class="feature-body">
+          <div class="pills"><span class="pill mint">Working interactive prototype</span><span class="pill">Agentic AI</span><span class="pill">HR &amp; compliance</span><span class="pill">Zero-to-one validation</span></div>
+          <h3 id="aer-title">Agentic Employee Records</h3>
+          <p class="intro"><strong>The problem:</strong> In high-churn organizations, employee-file evidence is fragmented, expiring or hard to defend during audits. <strong>The approach:</strong> a proposed governed agent layer that surfaces record gaps, explains policy and evidence, prepares remediation with HR approvals and assembles traceable audit records.</p>
+          <div class="three-col">
+            <div class="info"><h4>Product discovery</h4><p>HR Operations, compliance administrators and HR leaders; audit risk and manual document-chasing.</p></div>
+            <div class="info"><h4>Architecture &amp; MVP</h4><p>Ingestion, Compliance, Remediation, and Audit &amp; Retrieval agents; policy versions and explainability.</p></div>
+            <div class="info"><h4>Validation strategy</h4><p>Design partners, confirmed gap quality, resolution time, trusted explanations and audit-readiness.</p></div>
+          </div>
+          <p class="note"><strong>Status:</strong> Live interactive prototype plus a product-review presentation. Integrations, capabilities and targets described in the product plan are proposed unless separately demonstrated.</p>
+          <div class="project-actions">
+            <a class="btn primary" href="projects/agentic-employee-records/">Read complete case study ↗</a>
+            <a class="btn" href="https://agentic-employee-record.vercel.app/" target="_blank" rel="noopener noreferrer">Try working prototype ↗</a>
+            <a class="btn secondary" href="assets/agentic-employee-records-product-review.pdf" target="_blank" rel="noopener noreferrer">View presentation PDF ↗</a>
           </div>
         </div>
       </article>
