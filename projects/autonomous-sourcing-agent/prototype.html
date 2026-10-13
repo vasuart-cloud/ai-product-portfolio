@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08111f">
+  <meta name="description" content="Interactive, browser-only sample of a human-supervised Autonomous Sourcing Agent buyer journey. No live procurement systems involved.">
+  <title>Autonomous Sourcing Agent | Interactive Walkthrough</title>
+  <link rel="stylesheet" href="../../assets/site.css">
+  <link rel="stylesheet" href="../../assets/case-study.css">
+  <style>
+    .demo-wrap{max-width:970px;padding-top:60px;padding-bottom:65px}
+    .demo-wrap h1{font-size:clamp(2.2rem,4vw,3.6rem)}
+    .proto-panel[hidden]{display:none}
+    .proto-field{display:flex;flex-direction:column;gap:6px;margin:16px 0}
+    .proto-field input,.proto-field textarea{font:inherit;border:1px solid #496b81;color:#edf8ff;background:#0a1b2a;border-radius:9px;padding:10px 12px;width:100%}
+    .proto-field label{font-size:.87rem;font-weight:700;color:#bfdbe9}
+    .proto-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:14px 0}
+    .proto-fact{border:1px solid #2c5366;background:#173148;border-radius:10px;padding:13px}
+    .proto-fact small{display:block;color:#8abfd0}.proto-fact strong{display:block;color:#efffff;margin-top:4px}
+    .proto-check{display:flex;align-items:flex-start;gap:10px;padding:13px;border:1px solid #3a6271;border-radius:12px;background:#163145;margin-top:20px;color:#d6e9f1}
+    .proto-check input{margin-top:6px;accent-color:#63dbca}
+    .proto-feedback{color:#ffc88b;font-size:.87rem;margin:12px 0;min-height:1.3em}
+    .proto-list{color:#c7dbeb;padding-left:24px}
+    .proto-list li{margin:8px 0}
+    @media(max-width:620px){.proto-facts{grid-template-columns:1fr}.proto-table{font-size:.8rem}.proto-table th,.proto-table td{padding:10px 5px;}}
+  </style>
+</head>
+<body class="case-page">
+  <a class="skip" href="#demo">Skip to demo</a>
+  <header class="topbar"><div class="container nav">
+    <a class="brand" href="../../index.html"><span class="logo">SV</span><span>Sreenivas Vinnakota</span></a>
+    <nav class="navlinks"><a href="index.html">← Case study</a><a href="../../index.html#projects">All projects</a><a href="https://www.linkedin.com/in/vasuart/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></nav>
+  </div></header>
+  <main class="container demo-wrap" id="demo">
+    <div class="breadcrumb"><a href="../../index.html">Portfolio</a><span>›</span><a href="index.html">Autonomous Sourcing Agent</a><span>›</span><span aria-current="page">Interactive walkthrough</span></div>
+    <p class="eyebrow"><span class="dot"></span> Illustrative workflow · browser-only</p>
+    <h1>From sourcing request to <span class="gradient-text">defensible award.</span></h1>
+    <p class="lede">Step through a sample request for 50 ergonomic chairs. The four-agent system is represented through explanatory screens, with three human approvals that you must make to advance.</p>
+    <div class="case-callout warn"><strong>Simulation, not a live agent:</strong><p>All people, quotes, purchases, agent responses and decisions below are example data. The walkthrough uses local JavaScript only: no AI model, network connection, procurement API, supplier contact or real award is triggered.</p></div>
+    <div class="prototype-shell">
+      <div class="proto-top"><strong>Sample sourcing event · Office chairs</strong><span>Buyer workbench · Level 2 supervised</span></div>
+      <div class="proto-inner">
+        <div class="proto-progress" aria-label="Progress">
+          <div class="step active">Request</div><div class="step">Review</div><div class="step">Event</div><div class="step">Evaluate</div><div class="step">Award</div>
+        </div>
+        <div aria-live="polite" class="proto-feedback" id="feedback"></div>
+        <section class="proto-panel" data-step="0">
+          <p class="kicker">Agent 01 / Intake &amp; Policy</p><h2>Understand the purchase.</h2>
+          <div class="proto-dialog"><div class="who">Buyer request</div><p>“Source 50 ergonomic chairs for the Dallas office, by 15 October.”</p></div>
+          <div class="proto-facts"><div class="proto-fact"><small>Quantity</small><strong>50 chairs</strong></div><div class="proto-fact"><small>Illustrative budget limit</small><strong>$25,000</strong></div><div class="proto-fact"><small>Suggested route</small><strong>Competitive RFQ</strong></div></div>
+          <div class="proto-dialog"><div class="who">Sample agent response</div><p>This is an illustrative eligible tail-spend request. No covered contract was found in the sample scenario. Proceed to a draft supplier event, subject to buyer approvals.</p></div>
+        </section>
+        <section class="proto-panel" data-step="1" hidden>
+          <p class="kicker">Agent 02 / Category &amp; Supplier · Approval gate 1</p><h2>Confirm the requirement.</h2>
+          <p>The example agent has drafted an item description from three sample prior purchases. In a real product, the buyer could correct its assumptions and inspect references.</p>
+          <div class="proto-dialog"><div class="who">Proposed specification</div><p>50 adjustable ergonomic office task chairs; mesh back; adjustable lumbar support; delivery to Dallas by 15 October. Sample category: office seating.</p></div>
+          <label class="proto-check"><input type="checkbox" id="gate1"><span><strong>Gate 1:</strong> I reviewed and confirm the proposed category and specification for this simulated event.</span></label>
+        </section>
+        <section class="proto-panel" data-step="2" hidden>
+          <p class="kicker">Agent 03 / Event · Approval gate 2</p><h2>Authorize a competitive RFQ.</h2>
+          <p>The proposed event includes four sample suppliers and buyer-defined criteria. The mock event will not send any messages.</p>
+          <div class="proto-facts"><div class="proto-fact"><small>Supplier shortlist</small><strong>4 illustrative suppliers</strong></div><div class="proto-fact"><small>Close criterion</small><strong>3 valid quotes</strong></div><div class="proto-fact"><small>Evaluation weights</small><strong>80% price · 20% compliance</strong></div></div>
+          <div class="proto-dialog"><div class="who">Simulated event behavior</div><p>Publish after approval → collect sample responses → flag missing information → normalize quotes → close against agreed criteria.</p></div>
+          <label class="proto-check"><input type="checkbox" id="gate2"><span><strong>Gate 2:</strong> I approve this simulated supplier event and the scope of the example request.</span></label>
+        </section>
+        <section class="proto-panel" data-step="3" hidden>
+          <p class="kicker">Agent 04 / Evaluation &amp; Award</p><h2>Inspect the recommendation's evidence.</h2>
+          <p>The illustrative evaluation shows why Supplier B ranks ahead of Supplier D. Other responses are not shown in this simplified training example.</p>
+          <div style="overflow-x:auto"><table class="proto-table"><thead><tr><th>Supplier</th><th>Unit quote</th><th>50 units</th><th>Sample delivery</th><th>Compliance</th></tr></thead><tbody><tr><td><strong>B · recommended</strong></td><td>$280</td><td>$14,000</td><td>12 Oct</td><td>Pass</td></tr><tr><td>D · runner-up</td><td>$292</td><td>$14,600</td><td>14 Oct</td><td>Pass</td></tr></tbody></table></div>
+          <div class="proto-result"><strong>Explain the difference</strong><p>Supplier B is $12 cheaper per chair ($600 over 50 chairs), and its sample delivery is earlier. The example assumes both satisfy mandatory criteria. The source product presentation describes a 6.2-point weighted-score lead; the simplified walkthrough does not reproduce the full score calculation.</p></div>
+          <p class="small-note">This comparison is sample data, not a real supplier quotation or live agent output. A production implementation would link each figure to a source response and retain exclusions and scoring configuration.</p>
+        </section>
+        <section class="proto-panel" data-step="4" hidden>
+          <p class="kicker">Human approval gate 3 / Award</p><h2>Make the final decision.</h2>
+          <p>An agent can explain a recommendation, but a buyer still decides. Select an outcome for this browser-only event.</p>
+          <div class="proto-choices" role="radiogroup" aria-label="Award decision"><label><input type="radio" name="award" value="Supplier B" checked> Confirm B</label><label><input type="radio" name="award" value="Supplier D"> Override: choose D</label></div>
+          <div class="proto-field"><label for="reason">Reason for the decision</label><textarea id="reason" rows="3" placeholder="Example: lower price and earlier delivery"></textarea></div>
+          <div class="proto-result" id="award-result" hidden aria-live="polite"><strong>Sample decision recorded</strong><p id="award-summary"></p><p>This confirmation is stored only within the current page state; it is not saved to a backend and does not create a real purchase order.</p></div>
+        </section>
+        <div class="proto-nav"><button type="button" class="btn secondary" id="back" disabled>← Previous</button><button type="button" class="btn primary" id="next">Continue →</button><button type="button" class="btn" id="restart" hidden>Restart example ↻</button></div>
+      </div>
+      <div class="prototype-disclaimer">Example workflow only · no real AI inference · no supplier outreach · no personal data submitted</div>
+    </div>
+    <div class="case-links"><a class="btn secondary" href="index.html">← Read product strategy case study</a><a class="btn" href="../../index.html#agentic-employee-records">Next project: Employee Records ↗</a></div>
+  </main>
+  <footer><div class="container footer-grid"><span>© 2026 Sreenivas Vinnakota · Product simulation for portfolio review</span><span><a href="../../index.html">Portfolio home</a></span></div></footer>
+  <script>
+  (() => {
+    'use strict';
+    const panels = Array.from(document.querySelectorAll('.proto-panel'));
+    const steps = Array.from(document.querySelectorAll('.proto-progress .step'));
+    const back = document.getElementById('back');
+    const next = document.getElementById('next');
+    const restart = document.getElementById('restart');
+    const feedback = document.getElementById('feedback');
+    const gate1 = document.getElementById('gate1');
+    const gate2 = document.getElementById('gate2');
+    const reason = document.getElementById('reason');
+    const result = document.getElementById('award-result');
+    let current = 0;
+    let finished = false;
+    function show() {
+      panels.forEach((panel,i)=>{ panel.hidden=i!==current; });
+      steps.forEach((step,i)=>{ step.classList.toggle('active',i===current); step.classList.toggle('done',i<current); });
+      back.disabled=current===0 || finished;
+      next.hidden=finished;
+      next.textContent=current===panels.length-1?'Confirm simulated award ✓':'Continue →';
+      restart.hidden=!finished;
+      feedback.textContent='';
+    }
+    back.addEventListener('click',()=>{ if(current>0&&!finished){current--;show();} });
+    next.addEventListener('click',()=>{
+      if(current===1&&!gate1.checked){feedback.textContent='Confirm the specification before proceeding (Gate 1).';return;}
+      if(current===2&&!gate2.checked){feedback.textContent='Authorize the event before proceeding (Gate 2).';return;}
+      if(current===panels.length-1){
+        const selection = document.querySelector('input[name="award"]:checked');
+        const why = reason.value.trim();
+        if(!why){feedback.textContent='Add a short explanation before recording the simulated decision (Gate 3).';reason.focus();return;}
+        const p=document.getElementById('award-summary');
+        p.textContent=`Decision: ${selection.value}. Reason: ${why}. Illustrative event completed under three human approval gates.`;
+        result.hidden=false;
+        finished=true;
+        show();
+        result.scrollIntoView({behavior:'smooth',block:'nearest'});
+        return;
+      }
+      current++;show();
+    });
+    restart.addEventListener('click',()=>{
+      current=0;finished=false;gate1.checked=false;gate2.checked=false;reason.value='';
+      document.querySelector('input[name="award"][value="Supplier B"]').checked=true;
+      result.hidden=true;show();
+    });
+    show();
+  })();
+  </script>
+</body>
+</html>

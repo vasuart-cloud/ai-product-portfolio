@@ -1,0 +1,141 @@
+    <!doctype html>
+    <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="theme-color" content="#08111f">
+      <meta name="description" content="Autonomous Sourcing Agent case study: procurement pain points, discovery, four-agent architecture, buyer journey, MVP and AI evaluation strategy.">
+      <meta name="referrer" content="strict-origin-when-cross-origin">
+      <meta property="og:type" content="article">
+      <meta property="og:title" content="Autonomous Sourcing Agent — Product Case Study">
+      <meta property="og:description" content="Autonomous Sourcing Agent case study: procurement pain points, discovery, four-agent architecture, buyer journey, MVP and AI evaluation strategy.">
+      <title>Autonomous Sourcing Agent — Product Case Study | Sreenivas Vinnakota</title>
+      <link rel="stylesheet" href="../../assets/site.css">
+      <link rel="stylesheet" href="../../assets/case-study.css">
+    </head>
+    <body class="case-page">
+      <a class="skip" href="#case-main">Skip to content</a>
+      <header class="topbar"><div class="container nav">
+        <a class="brand" href="../../index.html" aria-label="Sreenivas Vinnakota portfolio home"><span class="logo">SV</span><span>Sreenivas Vinnakota</span></a>
+        <nav class="navlinks" aria-label="Primary navigation"><a href="../../index.html#projects">All projects</a><a href="../../index.html#experience">Experience</a><a href="../../index.html#contact">Contact</a><a class="mini-contact" href="https://www.linkedin.com/in/vasuart/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></nav>
+      </div></header>
+      <div class="container">
+        <header class="case-hero">
+          <div class="breadcrumb"><a href="../../index.html">Portfolio</a><span>›</span><a href="../../index.html#projects">Projects</a><span>›</span><span aria-current="page">Autonomous Sourcing Agent</span></div>
+          <p class="eyebrow"><span class="dot"></span> Case study 01 / Enterprise procurement AI</p>
+          <h1>Autonomous <span class="gradient-text">Sourcing Agent.</span></h1>
+          <p class="dek">A supervised agent approach to competitive sourcing for high-volume, low-value indirect purchases—designed around explainable supplier awards and customer-governed automation.</p>
+          <div class="case-overview"><span class="pill">Tail spend</span><span class="pill">Multi-agent orchestration</span><span class="pill">Level 2 · supervised</span><span class="pill">Human-in-the-loop</span><span class="pill">Concept and prototype exploration</span></div>
+          <div class="buttons"><a class="btn primary" href="prototype.html">Try simulated walkthrough ↗</a><a class="btn secondary" href="../../index.html#projects">← All projects</a></div>
+          <p class="case-status"><strong>Status:</strong> Proposed product and illustrative local prototype. The private PRD and leadership materials are not shared, and business outcomes are not presented as achieved.</p>
+        </header>
+        <div class="case-split">
+          <aside class="case-toc" aria-label="Case study sections"><h2>In this case study</h2><a href="#overview">Opportunity</a><a href="#discovery">Discovery</a><a href="#journey">User journey</a><a href="#architecture">Architecture</a><a href="#mvp">MVP choices</a><a href="#evaluation">Evaluation</a><a href="#prototype">Prototype</a></aside>
+          <main class="case-main" id="case-main"><section class="case-section" id="overview">
+  <p class="kicker">01 / Product opportunity</p><h2>Make the work of competitive sourcing economically viable.</h2>
+  <p><strong>Context:</strong> A buyer handling small, frequent indirect purchasing requests faces many of the same administrative tasks as a strategic sourcing event. Intake clarification, policy routing, supplier discovery, RFQ setup, follow-up, quote normalization and award documentation compete for limited buyer attention.</p>
+  <div class="case-grid three">
+    <div class="case-tile"><div class="mini">Customer / primary user</div><h3>Tactical buyer</h3><p>Needs a ready-to-review event and a supplier recommendation she can confidently explain.</p></div>
+    <div class="case-tile"><div class="mini">Governance / enabler</div><h3>Customer administrator</h3><p>Needs bounded policy controls, auditable configuration changes and evaluations before publishing.</p></div>
+    <div class="case-tile"><div class="mini">Economic buyer</div><h3>Chief Procurement Officer</h3><p>Needs more spend under management, defensible decisions and credible operational ROI.</p></div>
+  </div>
+  <div class="case-callout"><strong>Product insight:</strong><p>The differentiator is not an AI-generated RFQ. It is an end-to-end, governed event that a buyer would otherwise skip—ending in a decision supported by source evidence.</p></div>
+  <p class="small-note">Source basis: your Autonomous Sourcing Agent PRD v2 and leadership review. The customer scenarios and quoted prices below are illustrative, not customer outcomes.</p>
+</section>
+<section class="case-section" id="discovery">
+  <p class="kicker">02 / Product discovery</p><h2>Identify the constraint, not just the repetitive task.</h2>
+  <h3>Pain points investigated in the product proposal</h3>
+  <div class="case-grid">
+    <div class="case-tile"><h3>Too much work for too little value</h3><p>Low-value purchases still demand specification authoring, supplier outreach, event setup, quote comparison and recordkeeping. Buyers triage by urgency and spend size.</p></div>
+    <div class="case-tile"><h3>Demand and data are fragmented</h3><p>Similar requests are dispersed across teams; catalog, contract, supplier and price history have to be assembled manually.</p></div>
+    <div class="case-tile"><h3>Supplier responses are hard to compare</h3><p>Quotes arrive in portals or email, with missing or inconsistent fields. Re-entering information introduces effort and risk.</p></div>
+    <div class="case-tile"><h3>Decisions lack an evidence trail</h3><p>When a buyer is asked why a supplier won, the underlying scores, responses, weighting and exception rationale can be difficult to reconstruct.</p></div>
+  </div>
+  <h3>Product-discovery hypotheses to validate</h3>
+  <ul>
+    <li>Buyers will run more competitive events if an accurate draft and supplier shortlist already exist inside their current workflow.</li>
+    <li>Clear, quote-linked award explanations—not just a confidence score—will drive trust and repeat use.</li>
+    <li>Customer admins will enable broader coverage when changes can be replay-tested and reviewed before publication.</li>
+    <li>Starting with repeatable indirect categories is safer than beginning with direct materials or strategic contracts.</li>
+  </ul>
+  <div class="case-callout warn"><strong>Evidence boundary</strong><p>These are hypotheses and product design findings from the PRD and leadership materials, not claims of completed user-research samples or measured production adoption.</p></div>
+</section>
+<section class="case-section" id="journey">
+  <p class="kicker">03 / Buyer user journey</p><h2>Earn the buyer's trust at the award moment.</h2>
+  <p>The proposed experience moves from task execution to buyer oversight. It stays within the procurement application and uses conversational intake to reduce context switching.</p>
+  <div class="case-journey" aria-label="Proposed buyer adoption journey">
+    <div class="stage"><span class="number">01</span><h3>Awareness</h3><p>Buyer discovers sourcing assistance on a non-catalogue request.</p></div>
+    <div class="stage"><span class="number">02</span><h3>First use</h3><p>Agent proposes category, item description and suppliers based on available history.</p></div>
+    <div class="stage"><span class="number">03</span><h3>Trust</h3><p class="emphasis">Buyer asks, “Why did B beat D?” and sees the price, criteria and source quote.</p></div>
+    <div class="stage"><span class="number">04</span><h3>Habit</h3><p>Routine eligible requests route through the agent; exceptions stay visible.</p></div>
+    <div class="stage"><span class="number">05</span><h3>Advocacy</h3><p>Evidence of reliable awards supports adding users and eligible categories.</p></div>
+  </div>
+  <div class="case-timeline">
+    <div class="point"><h3>Request</h3><p>“Source 50 ergonomic chairs for Dallas.” The workflow checks contract coverage, policy and category fit.</p></div>
+    <div class="point"><h3>Buyer gate 1 — requirement</h3><p>The buyer corrects or confirms the specification and category, rather than drafting a blank event.</p></div>
+    <div class="point"><h3>Buyer gate 2 — event</h3><p>The buyer accepts suppliers and event terms before anything is communicated externally.</p></div>
+    <div class="point"><h3>Evidence-first recommendation</h3><p>Responses are normalized and scored. A worked example compares a $280/unit offer against a $292/unit offer, with exclusions and delivery differences surfaced.</p></div>
+    <div class="point"><h3>Buyer gate 3 — award</h3><p>A named human confirms or overrides the recommendation; the decision and reasoning become part of the audit record.</p></div>
+  </div>
+</section>
+<section class="case-section" id="architecture">
+  <p class="kicker">04 / Proposed AI architecture</p><h2>Four bounded agents, three product surfaces, one accountable buyer.</h2>
+  <div class="case-flow" aria-label="Multi-agent architecture">
+    <div class="node"><small>Agent 01</small><strong>Intake &amp; Policy</strong><p>Parse intent, verify permissions and check contracts, catalog, limits and routing.</p></div>
+    <div class="node"><small>Agent 02</small><strong>Category &amp; Supplier</strong><p>Draft from purchase history; recommend qualified suppliers with reasons.</p></div>
+    <div class="node"><small>Agent 03</small><strong>Event</strong><p>Prepare, publish after approval, track responses and normalize offline quotes.</p></div>
+    <div class="node"><small>Agent 04</small><strong>Evaluation &amp; Award</strong><p>Score bids, cite evidence, flag exceptions and prepare a human decision record.</p></div>
+  </div>
+  <h3>Separation of concerns</h3>
+  <div class="case-grid three">
+    <div class="case-tile"><div class="mini">Experience layer</div><h3>Buyer workbench</h3><p>Conversational request capture, reviewable sourcing drafts, event status and award confirmation.</p></div>
+    <div class="case-tile"><div class="mini">Control plane</div><h3>Admin configuration</h3><p>Typed, bounded thresholds, weights and routing policies; replay evaluations and versioned approvals.</p></div>
+    <div class="case-tile"><div class="mini">Execution layer</div><h3>Agent platform</h3><p>Versioned agent instructions, tools, workflow orchestration, guardrails, logging and per-tenant isolation.</p></div>
+  </div>
+  <div class="case-callout"><strong>Key governance decision:</strong><p>Developers define tested agent behavior. Customer administrators configure permitted limits. Buyers choose suppliers and awards. No actor silently substitutes for another.</p></div>
+  <h3>Fail-safe controls</h3>
+  <ul><li>Never infer unsupported supplier facts; trace quote-derived prices and criteria to the response.</li><li>Pause on low confidence, missing required certifications, conflicting quotes or tool failures.</li><li>Require three explicit human approval gates at Level 2: specification, launch and award.</li><li>Version and evaluate changes before broadening the allowed scope.</li></ul>
+</section>
+<section class="case-section" id="mvp">
+  <p class="kicker">05 / MVP decisions and trade-offs</p><h2>Supervised autonomy first. Full automation later—if earned.</h2>
+  <div class="case-grid">
+    <div class="case-tile"><div class="mini">In phase 1</div><h3>What makes the cut</h3><ul><li>Repeatable indirect tail-spend categories with historical context</li><li>Conversational intake and buyer-editable draft</li><li>Supplier shortlist and RFQ execution with approvals</li><li>Portal and emailed quote comparison</li><li>Explainable ranked recommendation and audit record</li><li>Bounded configuration and replay evaluations</li></ul></div>
+    <div class="case-tile"><div class="mini">Deliberately deferred</div><h3>What is not MVP</h3><ul><li>Automatic supplier award without a buyer</li><li>Negotiation bots and savings attribution</li><li>Strategic and direct-material sourcing</li><li>Contract generation</li><li>Broad autonomous cross-category rollout</li><li>Higher autonomy levels without measured evidence</li></ul></div>
+  </div>
+  <h3>Why Level 2?</h3>
+  <p>The agent can complete the operational steps between approval gates, but a named human approves the specification, event launch and award. This reflects the product's trust and auditability goals, while avoiding exaggerated claims of fully autonomous purchasing.</p>
+  <div class="case-callout warn"><strong>Key trade-off</strong><p>Retaining mandatory human approvals limits maximum automation speed, but narrows error exposure, keeps accountability explicit and gives customers a testable path to broader autonomy.</p></div>
+</section>
+<section class="case-section" id="evaluation">
+  <p class="kicker">06 / Evaluation and measurement</p><h2>Measure sourcing outcomes alongside evidence quality and trust.</h2>
+  <div class="case-metrics">
+    <div class="case-metric"><span>North star · proposed</span><strong>Tail spend competitively sourced per active buyer</strong><p>Per quarter, among eligible requests; avoids counting empty AI activity as business value.</p></div>
+    <div class="case-metric"><span>Trust</span><strong>Award acceptance + reasoned overrides</strong><p>Track evidence drill-down, override causes and time-to-decision together to identify automation bias.</p></div>
+    <div class="case-metric"><span>Efficiency</span><strong>Buyer touches per event</strong><p>Measure elapsed need-to-live-event time and events closed by declared criteria.</p></div>
+    <div class="case-metric"><span>Quality</span><strong>Category and quote accuracy</strong><p>Monitor correction rates, supplier-list edits, extracted quote quality and policy exceptions.</p></div>
+  </div>
+  <h3>Proposed eval suite</h3>
+  <div class="case-grid three">
+    <div class="case-tile"><h3>Replay evals</h3><p>Re-run recent sourcing cases under changed limits or scoring weights; reveal which decisions would change.</p></div>
+    <div class="case-tile"><h3>Scenario evals</h3><p>Challenge cold starts, no responses, unqualified suppliers, conflicting bids and emailed quote extraction.</p></div>
+    <div class="case-tile"><h3>Capability regressions</h3><p>Test versioned agent instructions, tool behavior, policy boundaries, refusals and trace completeness before rollout.</p></div>
+  </div>
+  <p class="small-note">Metrics and evaluation methods are proposed. No achieved production coverage, ROI or savings are asserted.</p>
+</section>
+<section class="case-section" id="prototype">
+  <p class="kicker">07 / Clickable product walkthrough</p><h2>Try the decision flow—not a fabricated live deployment.</h2>
+  <p>Explore a self-contained simulated buyer journey: a request for 50 chairs, requirements approval, supplier selection, event launch, quote comparison and a mandatory human award decision. The demo operates entirely in your browser and uses illustrative data.</p>
+  <div class="case-grid">
+    <div class="case-tile"><h3>Experience shown</h3><p>Multi-step buyer review, simulated agent responses, visible quote evidence, and explicit decision gates.</p></div>
+    <div class="case-tile"><h3>Not shown as live</h3><p>No real supplier outreach, ERP integration, API calls, model inference, sourcing savings or production decisioning.</p></div>
+  </div>
+  <div class="case-links"><a class="btn primary" href="prototype.html">Launch interactive sourcing walkthrough ↗</a><a class="btn" href="../../index.html#agentic-employee-records">Explore Employee Records project ↗</a></div>
+  <p class="small-note">Underlying internal PRD, leadership deck and customer-sensitive implementation details are intentionally excluded from the public website.</p>
+</section>
+</main>
+        </div>
+        <div class="case-bottom-cta"><h2>Interested in the product decisions behind the work?</h2><p>Let's connect about enterprise AI, agent architecture, product strategy, evaluation, and building trustworthy products.</p><div class="case-links"><a class="btn primary" href="mailto:sreenivas.vinnakota1@gmail.com?subject=AI%20Product%20Management%20Portfolio">Email me ↗</a><a class="btn" href="https://www.linkedin.com/in/vasuart/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a><a class="btn secondary" href="../../index.html#projects">← Back to all projects</a></div></div>
+      </div>
+      <footer><div class="container footer-grid"><span>© 2026 Sreenivas Vinnakota · Case study 01 · Autonomous Sourcing Agent</span><span><a href="../../index.html">Portfolio home</a> · <a href="../../index.html#contact">Contact</a></span></div></footer>
+    </body>
+    </html>

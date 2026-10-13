@@ -1,0 +1,129 @@
+    <!doctype html>
+    <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="theme-color" content="#08111f">
+      <meta name="description" content="Agentic Employee Records product case study with HR persona discovery, governance-led AI agents, user journey, MVP trade-offs, evaluation, and interactive demo.">
+      <meta name="referrer" content="strict-origin-when-cross-origin">
+      <meta property="og:type" content="article">
+      <meta property="og:title" content="Agentic Employee Records — Product Case Study">
+      <meta property="og:description" content="Agentic Employee Records product case study with HR persona discovery, governance-led AI agents, user journey, MVP trade-offs, evaluation, and interactive demo.">
+      <title>Agentic Employee Records — Product Case Study | Sreenivas Vinnakota</title>
+      <link rel="stylesheet" href="../../assets/site.css">
+      <link rel="stylesheet" href="../../assets/case-study.css">
+    </head>
+    <body class="case-page">
+      <a class="skip" href="#case-main">Skip to content</a>
+      <header class="topbar"><div class="container nav">
+        <a class="brand" href="../../index.html" aria-label="Sreenivas Vinnakota portfolio home"><span class="logo">SV</span><span>Sreenivas Vinnakota</span></a>
+        <nav class="navlinks" aria-label="Primary navigation"><a href="../../index.html#projects">All projects</a><a href="../../index.html#experience">Experience</a><a href="../../index.html#contact">Contact</a><a class="mini-contact" href="https://www.linkedin.com/in/vasuart/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></nav>
+      </div></header>
+      <div class="container">
+        <header class="case-hero">
+          <div class="breadcrumb"><a href="../../index.html">Portfolio</a><span>›</span><a href="../../index.html#projects">Projects</a><span>›</span><span aria-current="page">Agentic Employee Records</span></div>
+          <p class="eyebrow"><span class="dot"></span> Case study 02 / HR compliance AI</p>
+          <h1>Agentic <span class="gradient-text">Employee Records.</span></h1>
+          <p class="dek">A governed AI experience for detecting employee-record gaps, explaining the evidence, preparing human-approved remediation and supporting audit readiness.</p>
+          <div class="case-overview"><span class="pill">Working interactive prototype</span><span class="pill">HR operations</span><span class="pill">Compliance AI</span><span class="pill">Four proposed agents</span><span class="pill">Product review</span></div>
+          <div class="buttons"><a class="btn primary" href="https://agentic-employee-record.vercel.app/" target="_blank" rel="noopener noreferrer">Try working prototype ↗</a><a class="btn" href="../../assets/agentic-employee-records-product-review.pdf" target="_blank" rel="noopener noreferrer">Review presentation ↗</a></div>
+          <p class="case-status"><strong>Status:</strong> A working front-end demonstration is linked below. Proposed agent architecture, connectors, operational metrics and roadmap are plans to validate—not asserted production functionality.</p>
+        </header>
+        <div class="case-split">
+          <aside class="case-toc" aria-label="Case study sections"><h2>In this case study</h2><a href="#overview">Opportunity</a><a href="#discovery">Discovery</a><a href="#journey">User journey</a><a href="#architecture">Architecture</a><a href="#mvp">MVP choices</a><a href="#evaluation">Evaluation</a><a href="#prototype">Prototype</a></aside>
+          <main class="case-main" id="case-main"><section class="case-section" id="overview">
+  <p class="kicker">01 / Product thesis</p><h2>Employee-record management is an evidence problem, not simply a storage problem.</h2>
+  <p><strong>Product vision:</strong> an AI-governed compliance and evidence layer for high-churn workforces. Instead of replacing an HR management system, the proposed product detects gaps across existing records, explains them using policy and source evidence, prepares human-reviewed remediation and captures defensible audit history.</p>
+  <div class="case-grid three">
+    <div class="case-tile"><div class="mini">Primary user</div><h3>HR Operations Manager</h3><p>Works through employee-file gaps, document follow-ups, expiries, exceptions and audit preparation.</p></div>
+    <div class="case-tile"><div class="mini">Governance user</div><h3>HR Compliance Admin</h3><p>Owns rule versions, policy thresholds, confidence review and separation of duties.</p></div>
+    <div class="case-tile"><div class="mini">Economic buyer</div><h3>VP HR / CHRO</h3><p>Needs defensible evidence of compliance posture, operational efficiency and risk reduction.</p></div>
+  </div>
+  <div class="case-callout"><strong>Product thesis:</strong><p>The pivotal adoption moment is when HR asks “Why was this file flagged?” and receives the requirement, evidence source, applicable policy version and confidence together.</p></div>
+</section>
+<section class="case-section" id="discovery">
+  <p class="kicker">02 / Problem discovery</p><h2>Start with high-frequency gaps and expensive audit friction.</h2>
+  <p>The product review frames the opportunity in healthcare, staffing, manufacturing, logistics, BPO and other high-churn environments, where files can be scattered across HCM systems, content repositories and email.</p>
+  <div class="case-grid">
+    <div class="case-tile"><h3>Records exist, but are hard to defend</h3><p>Missing or expired certificates, right-to-work documents, policy acknowledgements and training records become audit issues when the evidence and rule cannot be tied together.</p></div>
+    <div class="case-tile"><h3>Manual reviews create a reactive queue</h3><p>HR teams hunt across systems, contact employees repeatedly and prioritize findings without a single explanation or SLA view.</p></div>
+    <div class="case-tile"><h3>Governance is difficult to reproduce</h3><p>When policy configurations change, administrators need to know which rule version generated which finding and whether the change breaks previous cases.</p></div>
+    <div class="case-tile"><h3>Buyers struggle to quantify the value</h3><p>CHROs need a credible reduction in time-to-resolution and audit-preparation work, not simply more AI-generated alerts.</p></div>
+  </div>
+  <h3>Proposed validation work</h3>
+  <ul><li>Interview 20–30 HR/compliance stakeholders in high-churn sectors and shadow five file-review workflows.</li><li>Baseline missing-file volume, evidence-retrieval effort, manual follow-ups and audit-preparation time.</li><li>Start with two or three painful document types; confirm that explainability and remediation create paid urgency.</li><li>Seek two to five paid design partners before committing to a broad rollout.</li></ul>
+  <p class="small-note">Interview counts, design-partner numbers and thresholds are planned validation activities described in the product presentation—not completed research or signed customers.</p>
+</section>
+<section class="case-section" id="journey">
+  <p class="kicker">03 / HR user journey</p><h2>Move from another alert queue to a trusted resolution workflow.</h2>
+  <div class="case-journey" aria-label="Proposed HR user journey">
+    <div class="stage"><span class="number">01</span><h3>Awareness</h3><p>HR sees audit-readiness indicators and priority gaps.</p></div>
+    <div class="stage"><span class="number">02</span><h3>First use</h3><p>Review an employee dossier with missing evidence and linked sources.</p></div>
+    <div class="stage"><span class="number">03</span><h3>Trust</h3><p class="emphasis">Open “Why?” to inspect policy, rule version, confidence and document evidence.</p></div>
+    <div class="stage"><span class="number">04</span><h3>Habit</h3><p>Approve remediation, track SLAs and handle exceptions weekly.</p></div>
+    <div class="stage"><span class="number">05</span><h3>Advocacy</h3><p>Show a complete audit packet and expand to more document categories.</p></div>
+  </div>
+  <div class="case-timeline">
+    <div class="point"><h3>Detect</h3><p>A compliance finding appears for an employee record, with severity and evidence status.</p></div>
+    <div class="point"><h3>Explain</h3><p>HR clicks “Why?” and sees the rule, source, confidence and history behind the finding.</p></div>
+    <div class="point"><h3>Approve</h3><p>The agent drafts a remediation task or message; a human reviews before outreach.</p></div>
+    <div class="point"><h3>Verify and close</h3><p>Evidence is re-checked; closure and the decision trail are recorded under the applicable policy version.</p></div>
+    <div class="point"><h3>Audit</h3><p>A traceable packet links the requirement, source document, finding, remediation and approval history.</p></div>
+  </div>
+</section>
+<section class="case-section" id="architecture">
+  <p class="kicker">04 / Proposed AI architecture</p><h2>Deterministic orchestration around bounded agents.</h2>
+  <p>The design favors a controlled sequence with known inputs, outputs and audit events over an unrestricted agent that can invent or execute compliance actions without review.</p>
+  <div class="case-flow" aria-label="Employee record agent flow">
+    <div class="node"><small>Agent 01</small><strong>Ingestion</strong><p>Connect, classify and map documents to employee evidence.</p></div>
+    <div class="node"><small>Agent 02</small><strong>Compliance</strong><p>Compare evidence with policy and rule versions; flag severity and confidence.</p></div>
+    <div class="node"><small>Agent 03</small><strong>Remediation</strong><p>Draft requests, route human approvals and manage escalation SLAs.</p></div>
+    <div class="node"><small>Agent 04</small><strong>Audit &amp; Retrieval</strong><p>Answer “why,” link source evidence and assemble the decision record.</p></div>
+  </div>
+  <h3>Cross-cutting design requirements</h3>
+  <div class="case-grid">
+    <div class="case-tile"><h3>Rule and source grounding</h3><p>Every finding needs an identifiable source document, policy reference, confidence signal and rule version.</p></div>
+    <div class="case-tile"><h3>Human accountability</h3><p>HR confirms findings and approves outbound communications or closure. The agent assists; it does not silently take responsibility.</p></div>
+    <div class="case-tile"><h3>Governance and isolation</h3><p>Role-based access, a separate author/approver flow, PII guardrails and tested configuration changes.</p></div>
+    <div class="case-tile"><h3>Observability</h3><p>Track false positives, overrides, agent errors, policy impact, action history and SLA breaches.</p></div>
+  </div>
+  <div class="case-callout"><strong>Architecture principle:</strong><p>Trigger → retrieve evidence → classify → apply versioned policy → create finding → require approval → remediate → verify → close. Every transition emits traceable evidence.</p></div>
+</section>
+<section class="case-section" id="mvp">
+  <p class="kicker">05 / MVP decisions and product roadmap</p><h2>Prove governed remediation on a narrow set of records.</h2>
+  <div class="case-grid">
+    <div class="case-tile"><div class="mini">Proposed alpha · months 0–3</div><h3>Initial wedge</h3><ul><li>Employee dossier and file-health view</li><li>Selected I-9, policy acknowledgement and certification gaps</li><li>“Why flagged?” evidence and confidence panel</li><li>Four-agent proposed orchestration</li><li>Human approvals, audit log and bounded remediation</li></ul></div>
+    <div class="case-tile"><div class="mini">Later phases / intentionally deferred</div><h3>Do not over-build yet</h3><ul><li>Broad global regulatory rule library</li><li>Fully autonomous closure or employee outreach</li><li>Full document retention / records replacement</li><li>Complex case management and multi-country coverage</li><li>Marketplace, bulk features and wider integrations before trust is demonstrated</li></ul></div>
+  </div>
+  <h3>Why this sequence?</h3>
+  <p>Document repositories already exist. The differentiated value must come from fewer unresolved gaps, faster reviews, reliable evidence, and a workflow HR is willing to trust. Phased investment should depend on those outcomes and buyer willingness to pay.</p>
+</section>
+<section class="case-section" id="evaluation">
+  <p class="kicker">06 / Evaluation strategy and success criteria</p><h2>Separate AI activity from verified compliance outcomes.</h2>
+  <div class="case-metrics">
+    <div class="case-metric"><span>North star · proposed</span><strong>Verified complete employee files within policy SLA</strong><p>Completeness must be supported by evidence and governed closure, not simply alert generation.</p></div>
+    <div class="case-metric"><span>Trust</span><strong>Finding confirmation and override reasons</strong><p>Track “Why?” drill-down, accepted / dismissed findings and whether reviewers understand the evidence.</p></div>
+    <div class="case-metric"><span>Quality</span><strong>Classification and policy accuracy</strong><p>Test false positives, false negatives, missing sources and rule-version regression behavior.</p></div>
+    <div class="case-metric"><span>Efficiency and adoption</span><strong>Time to resolve and weekly active HR users</strong><p>Measure touches per gap, median closure time, SLAs and sustained repeat use.</p></div>
+  </div>
+  <h3>Proposed evaluation framework</h3>
+  <ol><li><strong>Ground truth:</strong> build a representative, access-controlled set of records labelled by expert reviewers and policy version.</li><li><strong>Replay:</strong> test changes to rules or thresholds against prior findings before publish.</li><li><strong>Confidence gates:</strong> route ambiguous or missing evidence for human inspection rather than auto-closure.</li><li><strong>Pilot comparison:</strong> baseline gap handling and audit prep, then measure real-world trust and efficiency against the original workflow.</li><li><strong>Decision gate:</strong> pursue paid pilots and expand only when quality, trust, ROI and security evidence justify it.</li></ol>
+  <div class="case-callout warn"><strong>Measurement status:</strong><p>The product deck suggests pilot success thresholds, including weekly adoption and faster gap resolution. These are targets to be tested, not results already realized.</p></div>
+</section>
+<section class="case-section" id="prototype">
+  <p class="kicker">07 / Working prototype and product presentation</p><h2>Explore the clickable concept, then inspect the product thinking.</h2>
+  <figure class="case-image"><img src="../../assets/agentic-employee-records-cover.webp" alt="Agentic Employee Records product review cover" loading="lazy"><figcaption>Cover from the product review. The presentation frames the problem, personas, solution, roadmap, validation and business model.</figcaption></figure>
+  <div class="case-grid">
+    <div class="case-tile"><h3>Live interactive prototype</h3><p>Open the public demonstration to explore the concept and experience. It is a prototype; the case study does not assert connected enterprise integrations or a production compliance workflow.</p></div>
+    <div class="case-tile"><h3>Full product review</h3><p>Review the 11-page PDF covering market framing, personas, user journey, proposed agents, phased roadmap, evaluation, pilot design and GTM considerations.</p></div>
+  </div>
+  <div class="case-links"><a class="btn primary" href="https://agentic-employee-record.vercel.app/" target="_blank" rel="noopener noreferrer">Launch live interactive prototype ↗</a><a class="btn" href="../../assets/agentic-employee-records-product-review.pdf" target="_blank" rel="noopener noreferrer">Open product presentation (PDF) ↗</a><a class="btn secondary" href="https://github.com/vasuart-cloud/Agentic-Employee-Record" target="_blank" rel="noopener noreferrer">View project repository ↗</a></div>
+  <p class="small-note">Architecture, integrations, market assumptions, commercial projections and KPIs in the product review are proposed or subject to validation unless shown separately as working prototype behavior.</p>
+</section>
+</main>
+        </div>
+        <div class="case-bottom-cta"><h2>Interested in the product decisions behind the work?</h2><p>Let's connect about enterprise AI, agent architecture, product strategy, evaluation, and building trustworthy products.</p><div class="case-links"><a class="btn primary" href="mailto:sreenivas.vinnakota1@gmail.com?subject=AI%20Product%20Management%20Portfolio">Email me ↗</a><a class="btn" href="https://www.linkedin.com/in/vasuart/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a><a class="btn secondary" href="../../index.html#projects">← Back to all projects</a></div></div>
+      </div>
+      <footer><div class="container footer-grid"><span>© 2026 Sreenivas Vinnakota · Case study 02 · Agentic Employee Records</span><span><a href="../../index.html">Portfolio home</a> · <a href="../../index.html#contact">Contact</a></span></div></footer>
+    </body>
+    </html>
