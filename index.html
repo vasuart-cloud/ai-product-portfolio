@@ -208,6 +208,87 @@ body { min-width: 0; overflow-wrap: break-word; }
 .spa-viz span{width:11%;border-radius:6px 6px 0 0;background:linear-gradient(0deg,#2b7a92,#6adfd0);opacity:.88;}
 .spa-ui-footer{font-size:.69rem;text-align:center;color:#a9c7d6;margin-top:11px;letter-spacing:.08em;}
 @media(max-width:760px){.spa-showcase{grid-template-columns:1fr;padding:24px;}.spa-ui{transform:none;}.spa-ui-header{font-size:.6rem;}}
+
+
+/* Featured AI case studies: clearly separated, consistently structured panels */
+#projects.featured-work { padding-top:54px; padding-bottom:70px; }
+#projects .featured-section-heading {max-width:930px; margin-bottom:32px;}
+#projects .featured-section-heading h2 {font-size:clamp(2rem,3.8vw,3.15rem);max-width:850px;}
+#projects .featured-section-heading > p:last-child {max-width:790px;}
+#projects .case-studies-stack {display:grid;gap:26px;}
+#projects .case-study-panel {--case-accent:#64e1cf; display:grid;grid-template-columns:minmax(0,1.16fr) minmax(285px,.84fr);position:relative;isolation:isolate;min-width:0;overflow:hidden;border:1px solid #35536a;border-radius:22px;background:#101f31;box-shadow:0 12px 40px rgba(0,0,0,.14);scroll-margin-top:105px;}
+#projects .case-study-panel.case-wellness {--case-accent:#8bb7ff; background:#101f32;}
+#projects .case-study-panel.case-employee {--case-accent:#ecc393; background:#111f30;}
+#projects .case-study-content {padding:33px 33px 29px;min-width:0;}
+#projects .case-topline {display:flex;align-items:center;flex-wrap:wrap;gap:9px 13px;margin-bottom:16px;}
+#projects .case-number {display:grid;place-items:center;flex:0 0 37px;height:37px;border:1px solid #456a79;border-radius:10px;color:var(--case-accent);font-size:.9rem;font-weight:850;background:#182b3a;}
+#projects .case-domain {color:var(--case-accent);font-size:.7rem;line-height:1.4;font-weight:850;letter-spacing:.10em;}
+#projects .case-status {margin-left:auto;color:#c6d7e4;font-weight:650;font-size:.7rem;background:#213247;border:1px solid #3d566d;padding:5px 9px;border-radius:30px;white-space:nowrap;}
+#projects .case-study-content h3 {font-size:clamp(1.9rem,3.1vw,2.8rem);line-height:1.13;letter-spacing:-.04em;margin:0 0 8px;color:#f5faff;max-width:710px;}
+#projects .case-tagline {color:var(--case-accent);font-size:1.025rem;line-height:1.5;font-weight:680;max-width:650px;margin:0 0 20px;}
+#projects .case-definition {padding-top:17px;border-top:1px solid #32495d;display:grid;gap:12px;}
+#projects .case-definition-row {display:grid;grid-template-columns:101px minmax(0,1fr);align-items:start;gap:13px;}
+#projects .case-definition-row strong {color:#f0f5fb;font-size:.78rem;margin-top:1px;}
+#projects .case-definition-row p {color:#bfd0de;font-size:.89rem;line-height:1.65;margin:0;}
+#projects .case-keywords {display:flex;gap:7px;flex-wrap:wrap;margin:18px 0 19px;}
+#projects .case-keywords span {font-size:.72rem;line-height:1.2;color:#c4dbeb;padding:6px 9px;background:#1b3248;border:1px solid #35536b;border-radius:6px;}
+#projects .case-actions {display:flex;align-items:center;flex-wrap:wrap;gap:9px;}
+#projects .case-actions .btn {min-height:42px;padding:10px 13px;font-size:.8rem;border-radius:8px;}
+#projects .case-actions .btn.primary {background:var(--case-accent);border-color:var(--case-accent);color:#071722;}
+#projects .case-text-link {font-weight:750;color:#c2dcec;font-size:.82rem;text-decoration:underline;text-decoration-color:#54728c;text-underline-offset:4px;padding:8px 2px;}
+#projects .case-footnote {color:#91adbe;font-size:.71rem;line-height:1.45;margin:15px 0 0;}
+#projects .case-visual {min-width:0;padding:29px 26px 23px;border-left:1px solid #304c61;display:flex;flex-direction:column;justify-content:center;gap:17px;background:radial-gradient(ellipse at 70% 20%,rgba(57,167,179,.14),transparent 57%),linear-gradient(125deg,#112d3b,#101d30);}
+#projects .wellness-visual {background:radial-gradient(ellipse at 75% 25%,rgba(83,133,212,.19),transparent 64%),linear-gradient(125deg,#142742,#111b30);}
+#projects .employee-visual {background:radial-gradient(ellipse at 70% 20%,rgba(182,126,80,.14),transparent 60%),linear-gradient(125deg,#212c3d,#121b2c);}
+#projects .visual-eyebrow {display:flex;align-items:center;gap:8px;color:#b5d7dc;font-size:.67rem;font-weight:850;letter-spacing:.11em;}
+#projects .visual-signal {width:7px;height:7px;border-radius:50%;background:var(--case-accent);box-shadow:0 0 0 4px rgba(102,208,199,.09);}
+#projects .agent-flow-card {display:grid;gap:7px;}
+#projects .mini-step {display:flex;gap:11px;align-items:center;border:1px solid #345669;background:#122b3b;border-radius:10px;padding:11px;}
+#projects .mini-step-num {display:grid;place-items:center;flex:0 0 26px;height:26px;background:#265263;color:#a8f6e8;font-size:.72rem;font-weight:900;border-radius:7px;}
+#projects .mini-step div {flex:1;min-width:0;}
+#projects .mini-step strong {display:block;font-size:.81rem;line-height:1.3;color:#e7faff;}
+#projects .mini-step small {display:block;font-size:.7rem;color:#a0becf;line-height:1.4;margin-top:2px;}
+#projects .mini-arrow {color:#8ccfc8;font-weight:850;}
+#projects .visual-bottom-note {text-align:center;font-size:.71rem;line-height:1.4;color:#9eb9c9;margin:0;}
+#projects .insight-illustration {border:1px solid #45677e;border-radius:14px;background:#0d1b2f;padding:17px;box-shadow:0 15px 35px rgba(0,0,0,.15);}
+#projects .insight-top {display:flex;justify-content:space-between;gap:8px;font-size:.66rem;color:#e1f4fc;letter-spacing:.05em;}
+#projects .insight-top span {color:#92d9bf;font-size:.59rem;}
+#projects .insight-question {font-size:1rem;line-height:1.3;font-weight:750;margin:15px 0;color:#ebf7ff;}
+#projects .insight-mini-stats {display:grid;grid-template-columns:1fr 1fr;gap:9px;}
+#projects .insight-mini-stats div {padding:8px 10px;border:1px solid #344e67;border-radius:8px;background:#172c42;}
+#projects .insight-mini-stats small {display:block;font-size:.55rem;font-weight:850;color:#8cb0c9;letter-spacing:.06em;}
+#projects .insight-mini-stats strong {font-size:.75rem;color:#c9e4fa;}
+#projects .insight-bars {height:81px;display:flex;align-items:flex-end;justify-content:space-around;gap:8px;padding:9px 5px 0;margin-top:12px;border-bottom:1px solid #40647e;background:repeating-linear-gradient(to top,transparent,transparent 19px,#ffffff09 20px);}
+#projects .insight-bars i {display:block;width:10%;border-radius:5px 5px 0 0;background:linear-gradient(0deg,#437db3,#9cccff);}
+#projects .insight-advice {color:#a8cce2;text-align:center;font-size:.68rem;margin:13px 0 0;line-height:1.4;}
+#projects .employee-preview-image {border-radius:12px;overflow:hidden;border:1px solid #456078;background:#091a2d;}
+#projects .employee-preview-image img {width:100%;height:auto;aspect-ratio:1.83;object-fit:cover;object-position:center;}
+#projects .record-mini-flow {display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap;}
+#projects .record-mini-flow span {background:#26394a;border:1px solid #526476;border-radius:7px;padding:7px 8px;font-size:.69rem;font-weight:760;color:#e8d9c9;}
+#projects .record-mini-flow b {color:#f0c798;font-size:.85rem;}
+@media (max-width:980px) {
+  #projects .case-study-panel {grid-template-columns:minmax(0,1fr) minmax(250px,.78fr);}
+  #projects .case-study-content {padding:26px 24px;}
+  #projects .case-visual {padding:22px 18px;}
+}
+@media (max-width:760px) {
+  #projects .case-study-panel {grid-template-columns:1fr;}
+  #projects .case-visual {border-left:0;border-top:1px solid #304c61;padding:22px;}
+  #projects .case-topline .case-status {margin-left:0;}
+  #projects .case-definition-row {grid-template-columns:1fr;gap:2px;}
+  #projects .case-actions .btn {flex:1 1 170px;}
+  #projects .case-study-content h3 {font-size:clamp(1.8rem,6vw,2.25rem);}
+  #projects .agent-flow-card {grid-template-columns:repeat(2,minmax(0,1fr));}
+  #projects .mini-arrow {display:none;}
+  #projects .record-mini-flow {justify-content:flex-start;}
+}
+@media (max-width:460px) {
+  #projects .case-study-content {padding:22px 19px;}
+  #projects .case-actions .btn {flex:1 1 100%;}
+  #projects .case-text-link {width:100%;text-align:center;}
+  #projects .agent-flow-card {grid-template-columns:1fr;}
+}
+
 </style></head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -252,94 +333,98 @@ body { min-width: 0; overflow-wrap: break-word; }
 <div class="stat"><strong>$7.5M</strong><span>Qualified pipeline</span><small>Sales partnership contribution</small></div>
 </div>
 </div>
-<section class="container" id="projects">
-<div class="section-head">
-<p class="kicker">01 / Featured case studies</p>
-<h2>Real problems. Product decisions. Governed AI.</h2>
-<p>Detailed case studies on product discovery, user journeys, AI architecture, MVP prioritization, evaluations and hands-on prototypes. Procurement remains the first featured project.</p>
-</div>
-<article aria-labelledby="sourcing-title" class="card featured sourcing-feature" id="autonomous-sourcing">
-<div class="sourcing-banner">
-<div class="sourcing-banner-top">
-<p class="kicker">Case study 01 · Enterprise Procurement AI</p>
-<span class="pill mint">Hosted interactive prototype + case study</span>
-</div>
-<h3 id="sourcing-title">Autonomous Sourcing Agent</h3>
-<p class="summary">Making competitive sourcing feasible for the low-value, high-volume purchases that buyers often cannot afford to source manually.</p>
-<div aria-label="Proposed agent flow" class="sourcing-flow">
-<div class="sourcing-node"><small>01 · Discover</small><strong>Intake &amp; Policy</strong><span>Identify need, constraints and routing</span></div>
-<div class="sourcing-node"><small>02 · Design</small><strong>Category &amp; Supplier</strong><span>Reuse purchase history and suggest vendors</span></div>
-<div class="sourcing-node"><small>03 · Execute</small><strong>Event Agent</strong><span>Run RFQ and collect comparable quotes</span></div>
-<div class="sourcing-node"><small>04 · Decide</small><strong>Evaluation &amp; Award</strong><span>Explain ranking; buyer makes the award</span></div>
-</div>
-</div>
-<div class="feature-body">
-<div class="pills"><span class="pill">Tail-spend sourcing</span><span class="pill">4-agent workflow</span><span class="pill">3 human approvals</span><span class="pill">Enterprise governance</span></div>
-<p class="intro"><strong>The problem:</strong> Buyers spend time on repetitive event administration—writing specifications, finding suppliers, collecting inconsistent quotes, and documenting awards. Many smaller requisitions consequently bypass competition. <strong>The approach:</strong> an evidence-first, Level 2 supervised agent workflow embedded in procurement, with configurable boundaries and mandatory human decisions.</p>
-<div class="three-col">
-<div class="info"><h4>Product discovery</h4><p>Buyer, customer-administrator and procurement-leader needs; fragmented demand, administrative overhead and auditability.</p></div>
-<div class="info"><h4>Architecture &amp; MVP</h4><p>Four specialized agents, customer-governed rules, versioned evaluations and three mandatory approval gates.</p></div>
-<div class="info"><h4>Measuring success</h4><p>Competitively sourced tail spend per active buyer, buyer touches, trust in evidence, overrides and quote quality.</p></div>
-</div>
-<p class="note"><strong>Status:</strong> Explore the separately hosted interactive prototype and a browser-only sample walkthrough. The wider sourcing product, enterprise integrations and business outcomes described in this case study are proposals—not claims of a production rollout or measured savings. Internal requirements and leadership materials are not published here.</p>
-<div class="project-actions">
-<a aria-label="Try the Autonomous Sourcing Agent hosted prototype in a new tab" class="btn primary" href="https://autonomous-sourcing-agent.vercel.app/" rel="noopener noreferrer" target="_blank">Try live prototype ↗</a>
-<a class="btn" href="projects/autonomous-sourcing-agent/">Read complete case study ↗</a>
-<a class="btn secondary" href="projects/autonomous-sourcing-agent/prototype.html">Try sample walkthrough ↗</a>
-</div>
-</div>
-</article><article aria-labelledby="spa-title" class="card featured" id="spa-wellness-ai" style="margin-top:25px">
-<div aria-label="Illustrative analytics visualization for the InsightFlow concept" class="spa-showcase">
-<div class="spa-showcase-copy">
-<p class="kicker">Case study 02 · AI business intelligence</p>
-<h3>InsightFlow <span class="gradient-text">AI Business Advisor</span></h3>
-<p>Trusted insights · Better decisions · Measurable growth</p>
-<span class="spa-concept-label">Illustrative UI concept · synthetic example data</span>
-</div>
-<div aria-hidden="true" class="spa-ui">
-<div class="spa-ui-header"><span>INSIGHTFLOW / REGIONAL HEALTH</span><span>● DATA FRESHNESS</span></div>
-<div class="spa-mini-metrics"><div><small>Decision lens</small><strong>Repeat visits</strong></div><div><small>Opportunity</small><strong>Guest retention</strong></div></div>
-<div class="spa-viz"><span style="height:54%"></span><span style="height:78%"></span><span style="height:63%"></span><span style="height:91%"></span><span style="height:73%"></span><span style="height:85%"></span><span style="height:67%"></span><span style="height:98%"></span></div>
-<div class="spa-ui-footer">EXPLAIN → RECOMMEND → VERIFY IMPACT</div>
-</div>
-</div>
-<div class="feature-body">
-<div class="pills"><span class="pill mint">Working hosted concept prototype</span><span class="pill">Conversational analytics</span><span class="pill">Spa &amp; wellness</span><span class="pill">AI governance</span></div>
-<h3 id="spa-title">Spa &amp; Wellness AI Deep Research — InsightFlow</h3>
-<p class="intro"><strong>The problem:</strong> Multi-location salon leaders may struggle with fragmented reporting, uncertain data freshness, manual exports and slow translation of KPIs into action. <strong>The solution concept:</strong> an AI Business Advisor that explains business anomalies, makes actionable recommendations, saves refreshable insights and lets customer administrators govern access and AI costs.</p>
-<div class="three-col">
-<div class="info"><h4>Product discovery</h4><p>COO, regional manager and administrator personas; reporting trust, repeat visits, margins and operational priorities.</p></div>
-<div class="info"><h4>Product &amp; architecture</h4><p>Verified KPI layer, data freshness, explainable analytics, scheduled insights, approvals and an AI control tower.</p></div>
-<div class="info"><h4>MVP &amp; evaluation</h4><p>Start with trusted metrics and a saved weekly insight; test adoption, data quality, alert precision, cost and incremental value.</p></div>
-</div>
-<p class="note"><strong>Independent prototype:</strong> InsightFlow is a personal product concept inspired by salon and wellness analytics use cases. It is not an official Zenoti product. Prototype data, commercial scenarios and potential outcomes are illustrative—not customer results.</p>
-<div class="project-actions">
-<a class="btn primary" href="https://spa-wellness-ai-deep-research.vercel.app/" rel="noopener noreferrer" target="_blank">Try live prototype ↗</a>
-<a class="btn" href="projects/spa-wellness-ai-deep-research/">Read complete case study ↗</a>
-<a class="btn secondary" href="assets/spa-wellness-ai-strategy-presentation.pdf" rel="noopener noreferrer" target="_blank">View presentation ↗</a>
-<a class="btn secondary" href="https://github.com/vasuart-cloud/Spa-wellness-AI-deep-research-" rel="noopener noreferrer" target="_blank">View GitHub ↗</a>
-</div>
-</div>
-</article>
-<article aria-labelledby="aer-title" class="card featured" id="agentic-employee-records" style="margin-top:25px">
-<div class="project-media"><img alt="Cover artwork for the Agentic Employee Records product review" decoding="async" height="783" loading="eager" src="assets/agentic-employee-records-cover.webp" width="1392"/></div>
-<div class="feature-body"><p class="kicker" style="margin:0 0 12px">Case study 03 · Agentic HR compliance</p>
-<div class="pills"><span class="pill mint">Working interactive prototype</span><span class="pill">Agentic AI</span><span class="pill">HR &amp; compliance</span><span class="pill">Zero-to-one validation</span></div>
-<h3 id="aer-title">Agentic Employee Records</h3>
-<p class="intro"><strong>The problem:</strong> In high-churn organizations, employee-file evidence is fragmented, expiring or hard to defend during audits. <strong>The approach:</strong> a proposed governed agent layer that surfaces record gaps, explains policy and evidence, prepares remediation with HR approvals and assembles traceable audit records.</p>
-<div class="three-col">
-<div class="info"><h4>Product discovery</h4><p>HR Operations, compliance administrators and HR leaders; audit risk and manual document-chasing.</p></div>
-<div class="info"><h4>Architecture &amp; MVP</h4><p>Ingestion, Compliance, Remediation, and Audit &amp; Retrieval agents; policy versions and explainability.</p></div>
-<div class="info"><h4>Validation strategy</h4><p>Design partners, confirmed gap quality, resolution time, trusted explanations and audit-readiness.</p></div>
-</div>
-<p class="note"><strong>Status:</strong> Live interactive prototype plus a product-review presentation. Integrations, capabilities and targets described in the product plan are proposed unless separately demonstrated.</p>
-<div class="project-actions">
-<a class="btn primary" href="projects/agentic-employee-records/">Read complete case study ↗</a>
-<a class="btn" href="https://agentic-employee-record.vercel.app/" rel="noopener noreferrer" target="_blank">Try working prototype ↗</a>
-<a class="btn secondary" href="assets/agentic-employee-records-product-review.pdf" rel="noopener noreferrer" target="_blank">View presentation PDF ↗</a>
-</div>
-</div>
-</article>
+<section class="container featured-work" id="projects" aria-labelledby="featured-work-heading">
+  <div class="section-head featured-section-heading">
+    <p class="kicker">01 / Featured case studies</p>
+    <h2 id="featured-work-heading">From real business problems to purposeful AI products.</h2>
+    <p>Three projects, each with a clear customer problem, a proposed solution, and a working or illustrative prototype. Explore the strategy and product decisions behind each one.</p>
+  </div>
+
+  <div class="case-studies-stack">
+    <section class="case-study-panel case-sourcing" id="autonomous-sourcing" aria-labelledby="sourcing-title">
+      <div class="case-study-content">
+        <div class="case-topline"><span class="case-number">01</span><span class="case-domain">PROCUREMENT · AGENTIC AI</span><span class="case-status">Live prototype</span></div>
+        <h3 id="sourcing-title">Autonomous Sourcing Agent</h3>
+        <p class="case-tagline">Making competitive sourcing practical for high-volume, low-value purchases.</p>
+        <div class="case-definition">
+          <div class="case-definition-row"><strong>The problem</strong><p>Buyers often skip RFQs for tail-spend purchases because creating events, chasing suppliers and comparing quotes takes too much time.</p></div>
+          <div class="case-definition-row"><strong>My approach</strong><p>Four coordinated agents manage intake, supplier discovery, event execution and evidence-backed award recommendations, with three mandatory buyer approvals.</p></div>
+        </div>
+        <div class="case-keywords"><span>Tail-spend sourcing</span><span>Multi-agent workflows</span><span>Human-in-the-loop</span></div>
+        <div class="case-actions">
+          <a class="btn primary" href="projects/autonomous-sourcing-agent/">Explore case study ↗</a>
+          <a class="btn" href="https://autonomous-sourcing-agent.vercel.app/" target="_blank" rel="noopener noreferrer">Try live prototype ↗</a>
+          <a class="case-text-link" href="projects/autonomous-sourcing-agent/prototype.html">Sample walkthrough →</a>
+        </div>
+        <p class="case-footnote">Prototype and proposed enterprise approach; not a claim of a production sourcing deployment.</p>
+      </div>
+      <aside class="case-visual sourcing-visual" aria-label="Illustrative supervised sourcing agent flow">
+        <div class="visual-eyebrow"><span class="visual-signal"></span> SUPERVISED SOURCING FLOW</div>
+        <div class="agent-flow-card">
+          <div class="mini-step"><span class="mini-step-num">01</span><div><strong>Understand the request</strong><small>Intake &amp; Policy Agent</small></div><span class="mini-arrow">↓</span></div>
+          <div class="mini-step"><span class="mini-step-num">02</span><div><strong>Find the right suppliers</strong><small>Category &amp; Supplier Agent</small></div><span class="mini-arrow">↓</span></div>
+          <div class="mini-step"><span class="mini-step-num">03</span><div><strong>Run the sourcing event</strong><small>Event Agent</small></div><span class="mini-arrow">↓</span></div>
+          <div class="mini-step"><span class="mini-step-num">04</span><div><strong>Recommend the award</strong><small>Evaluation &amp; Award Agent</small></div><span class="mini-arrow">✓</span></div>
+        </div>
+        <p class="visual-bottom-note">Three buyer approval gates · Every recommendation backed by evidence</p>
+      </aside>
+    </section>
+
+    <section class="case-study-panel case-wellness" id="spa-wellness-ai" aria-labelledby="spa-title">
+      <div class="case-study-content">
+        <div class="case-topline"><span class="case-number">02</span><span class="case-domain">SPA &amp; WELLNESS · BUSINESS INTELLIGENCE</span><span class="case-status">Live concept prototype</span></div>
+        <h3 id="spa-title">InsightFlow — AI Business Advisor</h3>
+        <p class="case-tagline">Turning fragmented salon performance data into decisions leaders can trust and act on.</p>
+        <div class="case-definition">
+          <div class="case-definition-row"><strong>The problem</strong><p>Multi-location operators face disconnected reports, uncertain data freshness and difficulty identifying which salons need attention.</p></div>
+          <div class="case-definition-row"><strong>My approach</strong><p>An AI Business Advisor explains trends, suggests practical next steps and explores refreshable insights with permissions, auditability and AI-cost controls.</p></div>
+        </div>
+        <div class="case-keywords"><span>Conversational analytics</span><span>Trusted data</span><span>AI governance</span></div>
+        <div class="case-actions">
+          <a class="btn primary" href="projects/spa-wellness-ai-deep-research/">Explore case study ↗</a>
+          <a class="btn" href="https://spa-wellness-ai-deep-research.vercel.app/" target="_blank" rel="noopener noreferrer">Try live prototype ↗</a>
+          <a class="case-text-link" href="assets/spa-wellness-ai-strategy-presentation.pdf" target="_blank" rel="noopener noreferrer">View presentation →</a>
+        </div>
+        <p class="case-footnote">Independent concept and synthetic examples; not an official Zenoti product or measured customer outcome.</p>
+      </div>
+      <aside class="case-visual wellness-visual" aria-label="Illustrative InsightFlow analytics concept">
+        <div class="visual-eyebrow"><span class="visual-signal"></span> FROM INSIGHT TO ACTION</div>
+        <div class="insight-illustration">
+          <div class="insight-top"><strong>INSIGHTFLOW</strong><span>● Source freshness visible</span></div>
+          <div class="insight-question">Why are repeat visits falling?</div>
+          <div class="insight-mini-stats"><div><small>FOCUS</small><strong>Guest retention</strong></div><div><small>VIEW</small><strong>Regional trends</strong></div></div>
+          <div class="insight-bars" aria-hidden="true"><i style="height:53%"></i><i style="height:75%"></i><i style="height:62%"></i><i style="height:87%"></i><i style="height:65%"></i><i style="height:83%"></i><i style="height:72%"></i></div>
+          <p class="insight-advice">Explain the pattern → Recommend an action → Verify the impact</p>
+        </div>
+        <p class="visual-bottom-note">Illustrative product interface · Example data only</p>
+      </aside>
+    </section>
+
+    <section class="case-study-panel case-employee" id="agentic-employee-records" aria-labelledby="aer-title">
+      <div class="case-study-content">
+        <div class="case-topline"><span class="case-number">03</span><span class="case-domain">HR COMPLIANCE · AGENTIC AI</span><span class="case-status">Live prototype</span></div>
+        <h3 id="aer-title">Agentic Employee Records</h3>
+        <p class="case-tagline">Making employee-file compliance easier to monitor, explain and defend.</p>
+        <div class="case-definition">
+          <div class="case-definition-row"><strong>The problem</strong><p>HR teams spend time hunting for missing or expired documents, while fragmented evidence makes audits and follow-ups harder.</p></div>
+          <div class="case-definition-row"><strong>My approach</strong><p>A governed agent workflow identifies record gaps, shows the policy and evidence behind each finding, and prepares remediation for HR approval.</p></div>
+        </div>
+        <div class="case-keywords"><span>Explainable AI</span><span>Compliance workflows</span><span>Audit evidence</span></div>
+        <div class="case-actions">
+          <a class="btn primary" href="projects/agentic-employee-records/">Explore case study ↗</a>
+          <a class="btn" href="https://agentic-employee-record.vercel.app/" target="_blank" rel="noopener noreferrer">Try live prototype ↗</a>
+          <a class="case-text-link" href="assets/agentic-employee-records-product-review.pdf" target="_blank" rel="noopener noreferrer">View presentation →</a>
+        </div>
+        <p class="case-footnote">Prototype and product-validation strategy; planned enterprise integrations are not presented as deployed.</p>
+      </div>
+      <aside class="case-visual employee-visual" aria-label="Agentic Employee Records cover image and proposed workflow">
+        <div class="visual-eyebrow"><span class="visual-signal"></span> EVIDENCE-FIRST HR AUTOMATION</div>
+        <div class="employee-preview-image"><img src="assets/agentic-employee-records-cover.webp" alt="Agentic Employee Records product concept cover" loading="lazy" width="1392" height="783"></div>
+        <div class="record-mini-flow"><span>Detect gaps</span><b>→</b><span>Explain why</span><b>→</b><span>Approve action</span></div>
+        <p class="visual-bottom-note">Human confirmation and traceable policy evidence</p>
+      </aside>
+    </section>
+  </div>
 </section>
 <section aria-labelledby="experience-projects-title" class="container">
 <div class="section-head"><p class="kicker">02 / Selected enterprise products</p><h2 id="experience-projects-title">Products I've helped bring to life.</h2><p>Enterprise product work drawn from my professional experience. These are portfolio summaries, not public demonstrations or disclosures of internal systems.</p></div>
