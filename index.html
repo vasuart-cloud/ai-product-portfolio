@@ -5,13 +5,12 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="#08111f" name="theme-color"/>
-<meta content="Sreenivas Vinnakota is an AI Product Manager with 16+ years across agentic AI, enterprise SaaS, procurement, conversational AI, and digital products. Explore projects and product thinking." name="description"/>
+<meta content="Sreenivas Vinnakota AI Product Manager portfolio: Autonomous Sourcing Agent, InsightFlow Spa &amp; Wellness AI Business Advisor and Agentic Employee Records, with live prototypes and case studies." name="description"/>
 <meta content="website" property="og:type"/>
 <meta content="Sreenivas Vinnakota · AI Product Manager" property="og:title"/>
 <meta content="Agentic AI, enterprise product strategy and working AI prototypes. Explore my projects, impact, and career." property="og:description"/>
 <meta content="strict-origin-when-cross-origin" name="referrer"/>
 <title>Sreenivas Vinnakota | AI Product Manager &amp; Product Builder</title>
-
 <style id="portfolio-styles">/* Self-contained portfolio styles. No external CSS required. */
     :root {
       color-scheme: dark;
@@ -193,6 +192,22 @@ body { min-width: 0; overflow-wrap: break-word; }
   .navlinks { -webkit-overflow-scrolling: touch; }
   .btn { min-height: 44px; }
 }
+
+/* Spa & Wellness AI case study card */
+.spa-showcase { padding:36px; min-height:340px; border-bottom:1px solid #294258; display:grid;grid-template-columns:1fr .93fr;gap:24px;align-items:center;background:radial-gradient(circle at 78% 33%,rgba(48,158,166,.22),transparent 52%),linear-gradient(125deg,#112f3b,#111d31 65%,#152c3f); }
+.spa-showcase-copy h3 {font-size:clamp(2.1rem,3.7vw,3.35rem);letter-spacing:-.05em;line-height:1.1;max-width:550px;margin:14px 0;}
+.spa-showcase-copy>p:not(.kicker){color:#aac6d6;font-size:1rem;}
+.spa-concept-label{display:inline-block;border:1px solid #3a6077;color:#9cbfd3;padding:7px 12px;border-radius:9px;font-size:.77rem;margin-top:6px;}
+.spa-ui{background:#0c1828;border:1px solid #436377;border-radius:17px;box-shadow:0 20px 50px #050c1840;padding:20px;transform:rotate(-1deg);}
+.spa-ui-header{display:flex;justify-content:space-between;gap:12px;color:#81d9cc;letter-spacing:.08em;font-size:.67rem;font-weight:800;border-bottom:1px solid #243e4b;padding-bottom:11px;}
+.spa-mini-metrics{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:15px 0;}
+.spa-mini-metrics>div{border:1px solid #2a4555;background:#11273a;border-radius:10px;padding:10px 13px;}
+.spa-mini-metrics small{display:block;color:#9fb6c8;font-size:.68rem;}
+.spa-mini-metrics strong{font-size:.95rem;color:#def6f3;}
+.spa-viz{display:flex;align-items:end;justify-content:space-around;gap:9px;height:115px;padding:10px 9px 0;border-bottom:1px solid #406175;background:repeating-linear-gradient(to top,transparent,transparent 27px,#ffffff0d 28px);}
+.spa-viz span{width:11%;border-radius:6px 6px 0 0;background:linear-gradient(0deg,#2b7a92,#6adfd0);opacity:.88;}
+.spa-ui-footer{font-size:.69rem;text-align:center;color:#a9c7d6;margin-top:11px;letter-spacing:.08em;}
+@media(max-width:760px){.spa-showcase{grid-template-columns:1fr;padding:24px;}.spa-ui{transform:none;}.spa-ui-header{font-size:.6rem;}}
 </style></head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -241,7 +256,7 @@ body { min-width: 0; overflow-wrap: break-word; }
 <div class="section-head">
 <p class="kicker">01 / Featured case studies</p>
 <h2>Real problems. Product decisions. Governed AI.</h2>
-<p>Detailed case studies covering problem discovery, experience design, agent architecture, MVP prioritization, evaluation plans and interactive prototypes. My enterprise procurement work leads the portfolio.</p>
+<p>Detailed case studies on product discovery, user journeys, AI architecture, MVP prioritization, evaluations and hands-on prototypes. Procurement remains the first featured project.</p>
 </div>
 <article aria-labelledby="sourcing-title" class="card featured sourcing-feature" id="autonomous-sourcing">
 <div class="sourcing-banner">
@@ -268,15 +283,47 @@ body { min-width: 0; overflow-wrap: break-word; }
 </div>
 <p class="note"><strong>Status:</strong> Explore the separately hosted interactive prototype and a browser-only sample walkthrough. The wider sourcing product, enterprise integrations and business outcomes described in this case study are proposals—not claims of a production rollout or measured savings. Internal requirements and leadership materials are not published here.</p>
 <div class="project-actions">
-<a class="btn primary" href="https://autonomous-sourcing-agent.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Try the Autonomous Sourcing Agent hosted prototype in a new tab">Try live prototype ↗</a>
+<a aria-label="Try the Autonomous Sourcing Agent hosted prototype in a new tab" class="btn primary" href="https://autonomous-sourcing-agent.vercel.app/" rel="noopener noreferrer" target="_blank">Try live prototype ↗</a>
 <a class="btn" href="projects/autonomous-sourcing-agent/">Read complete case study ↗</a>
 <a class="btn secondary" href="projects/autonomous-sourcing-agent/prototype.html">Try sample walkthrough ↗</a>
+</div>
+</div>
+</article><article aria-labelledby="spa-title" class="card featured" id="spa-wellness-ai" style="margin-top:25px">
+<div aria-label="Illustrative analytics visualization for the InsightFlow concept" class="spa-showcase">
+<div class="spa-showcase-copy">
+<p class="kicker">Case study 02 · AI business intelligence</p>
+<h3>InsightFlow <span class="gradient-text">AI Business Advisor</span></h3>
+<p>Trusted insights · Better decisions · Measurable growth</p>
+<span class="spa-concept-label">Illustrative UI concept · synthetic example data</span>
+</div>
+<div aria-hidden="true" class="spa-ui">
+<div class="spa-ui-header"><span>INSIGHTFLOW / REGIONAL HEALTH</span><span>● DATA FRESHNESS</span></div>
+<div class="spa-mini-metrics"><div><small>Decision lens</small><strong>Repeat visits</strong></div><div><small>Opportunity</small><strong>Guest retention</strong></div></div>
+<div class="spa-viz"><span style="height:54%"></span><span style="height:78%"></span><span style="height:63%"></span><span style="height:91%"></span><span style="height:73%"></span><span style="height:85%"></span><span style="height:67%"></span><span style="height:98%"></span></div>
+<div class="spa-ui-footer">EXPLAIN → RECOMMEND → VERIFY IMPACT</div>
+</div>
+</div>
+<div class="feature-body">
+<div class="pills"><span class="pill mint">Working hosted concept prototype</span><span class="pill">Conversational analytics</span><span class="pill">Spa &amp; wellness</span><span class="pill">AI governance</span></div>
+<h3 id="spa-title">Spa &amp; Wellness AI Deep Research — InsightFlow</h3>
+<p class="intro"><strong>The problem:</strong> Multi-location salon leaders may struggle with fragmented reporting, uncertain data freshness, manual exports and slow translation of KPIs into action. <strong>The solution concept:</strong> an AI Business Advisor that explains business anomalies, makes actionable recommendations, saves refreshable insights and lets customer administrators govern access and AI costs.</p>
+<div class="three-col">
+<div class="info"><h4>Product discovery</h4><p>COO, regional manager and administrator personas; reporting trust, repeat visits, margins and operational priorities.</p></div>
+<div class="info"><h4>Product &amp; architecture</h4><p>Verified KPI layer, data freshness, explainable analytics, scheduled insights, approvals and an AI control tower.</p></div>
+<div class="info"><h4>MVP &amp; evaluation</h4><p>Start with trusted metrics and a saved weekly insight; test adoption, data quality, alert precision, cost and incremental value.</p></div>
+</div>
+<p class="note"><strong>Independent prototype:</strong> InsightFlow is a personal product concept inspired by salon and wellness analytics use cases. It is not an official Zenoti product. Prototype data, commercial scenarios and potential outcomes are illustrative—not customer results.</p>
+<div class="project-actions">
+<a class="btn primary" href="https://spa-wellness-ai-deep-research.vercel.app/" rel="noopener noreferrer" target="_blank">Try live prototype ↗</a>
+<a class="btn" href="projects/spa-wellness-ai-deep-research/">Read complete case study ↗</a>
+<a class="btn secondary" href="assets/spa-wellness-ai-strategy-presentation.pdf" rel="noopener noreferrer" target="_blank">View presentation ↗</a>
+<a class="btn secondary" href="https://github.com/vasuart-cloud/Spa-wellness-AI-deep-research-" rel="noopener noreferrer" target="_blank">View GitHub ↗</a>
 </div>
 </div>
 </article>
 <article aria-labelledby="aer-title" class="card featured" id="agentic-employee-records" style="margin-top:25px">
 <div class="project-media"><img alt="Cover artwork for the Agentic Employee Records product review" decoding="async" height="783" loading="eager" src="assets/agentic-employee-records-cover.webp" width="1392"/></div>
-<div class="feature-body">
+<div class="feature-body"><p class="kicker" style="margin:0 0 12px">Case study 03 · Agentic HR compliance</p>
 <div class="pills"><span class="pill mint">Working interactive prototype</span><span class="pill">Agentic AI</span><span class="pill">HR &amp; compliance</span><span class="pill">Zero-to-one validation</span></div>
 <h3 id="aer-title">Agentic Employee Records</h3>
 <p class="intro"><strong>The problem:</strong> In high-churn organizations, employee-file evidence is fragmented, expiring or hard to defend during audits. <strong>The approach:</strong> a proposed governed agent layer that surfaces record gaps, explains policy and evidence, prepares remediation with HR approvals and assembles traceable audit records.</p>
