@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#08111f" name="theme-color"/><meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta content="Spa &amp; Wellness AI Deep Research: InsightFlow AI Business Advisor product case study covering data trust, salon personas, AI architecture, MVP, governance, evaluation and an interactive prototype." name="description"/>
+<meta content="article" property="og:type"/><meta content="InsightFlow: Spa &amp; Wellness AI Business Advisor — Case Study" property="og:title"/>
+<meta content="See the product discovery, architecture, MVP and validation plan for an independent spa and wellness AI decision intelligence prototype." property="og:description"/>
+<title>Spa &amp; Wellness AI Deep Research — InsightFlow | Sreenivas Vinnakota</title>
+<style id="portfolio-styles">/* Self-contained portfolio styles. No external CSS required. */
+    :root {
+      color-scheme: dark;
+      --bg:#08111f; --surface:#101e30; --surface2:#14253a; --line:#284056;
+      --text:#eaf3fb; --muted:#a2b6ca; --accent:#5fe1d0; --blue:#80b5ff; --white:#ffffff;
+      --max:1160px; --radius:18px;
+    }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; scroll-padding-top:92px; }
+    body { background:var(--bg); color:var(--text); margin:0; font:16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Arial, sans-serif; }
+    body::before { content:""; position:absolute; z-index:-1; inset:0 0 auto; height:840px; pointer-events:none;
+      background: radial-gradient(ellipse 50% 55% at 73% 20%,rgba(40,132,186,.21),transparent 70%), radial-gradient(ellipse 42% 54% at 15% 3%,rgba(45,181,154,.13),transparent 70%); }
+    a { color:inherit; text-underline-offset:3px; }
+    a:hover { color:var(--accent); }
+    :focus-visible { outline:3px solid var(--accent); outline-offset:4px; border-radius:4px; }
+    img { max-width:100%; height:auto; display:block; }
+    .container { width:min(var(--max),calc(100% - 44px)); margin-inline:auto; }
+    .skip { position:absolute; left:12px; top:-100px; padding:10px 15px; z-index:99; background:var(--white); color:#061120; }
+    .skip:focus { top:10px; }
+    .topbar { position:sticky; top:0; z-index:20; backdrop-filter:blur(18px); background:rgba(8,17,31,.90); border-bottom:1px solid rgba(124,170,195,.17); }
+    .nav { height:76px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .brand { display:flex; gap:12px; align-items:center; text-decoration:none; font-weight:800; letter-spacing:-.02em; white-space:nowrap; }
+    .logo { display:grid; place-items:center; width:39px; height:39px; background:linear-gradient(135deg,#53d6c6,#5699ff); color:#071321; border-radius:12px; font-weight:900; letter-spacing:-.07em; }
+    .navlinks { display:flex; align-items:center; gap:23px; }
+    .navlinks a { font-size:.88rem; text-decoration:none; color:#c6d9e6; font-weight:600; }
+    .navlinks a:hover { color:var(--accent); }
+    .mini-contact { border:1px solid #3d7b83; padding:10px 15px; border-radius:12px; }
+    .hero { padding:100px 0 84px; display:grid; grid-template-columns:1.24fr .76fr; align-items:center; gap:52px; }
+    .eyebrow { display:inline-flex; align-items:center; gap:10px; color:var(--accent); font-size:.78rem; font-weight:800; letter-spacing:.13em; text-transform:uppercase; }
+    .dot { display:inline-block; width:8px; height:8px; border-radius:50%; background:var(--accent); box-shadow:0 0 0 5px rgba(95,225,208,.1); }
+    h1,h2,h3,h4,p { margin-top:0; }
+    h1 { margin:22px 0 13px; font-size:clamp(3rem,5.4vw,5.3rem); line-height:1.06; letter-spacing:-.055em; }
+    .gradient-text { color:var(--accent); }
+    .hero-role { font-size:1.3rem; color:#c7d9e8; font-weight:650; letter-spacing:-.017em; margin-bottom:16px; }
+    .lede { max-width:655px; color:var(--muted); font-size:1.08rem; line-height:1.85; }
+    .buttons { display:flex; gap:12px; flex-wrap:wrap; margin:28px 0 24px; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; gap:9px; padding:12px 18px; border:1px solid #456277; border-radius:11px; text-decoration:none; font-weight:750; font-size:.91rem; background:#152638; color:#e8f4fc; transition:transform .17s, background .17s; }
+    .btn:hover { transform:translateY(-2px); color:#061321; background:var(--accent); border-color:var(--accent); }
+    .btn.primary { background:var(--accent); border-color:var(--accent); color:#051d25; }
+    .btn.primary:hover { background:#b4fff2; }
+    .btn.secondary { background:transparent; }
+    .hero-meta { display:flex; align-items:center; flex-wrap:wrap; gap:13px 22px; color:#97b2c9; font-size:.9rem; }
+    .hero-meta span { display:inline-flex; gap:7px; align-items:center; }
+    .profile-card { padding:29px; border-radius:27px; border:1px solid #294c60; background:linear-gradient(142deg,#18334a,#101d2c 66%,#14253d); box-shadow:0 35px 90px rgba(0,0,0,.22); }
+    .photo-wrap { width:min(100%,285px); aspect-ratio:1; margin:8px auto 24px; position:relative; border-radius:50%; border:8px solid #203c55; box-shadow:0 0 0 2px #3b7a88,0 20px 50px rgba(0,0,0,.30); overflow:hidden; display:grid; place-items:center; background:linear-gradient(145deg,#245067,#1d2f4b); }
+    .photo-wrap::before { content:"SV"; position:absolute; font-size:5.2rem; font-weight:800; color:#82d8db; }
+    .photo-wrap img { width:100%; height:100%; object-fit:cover; position:relative; }
+    .profile-card h2 { text-align:center; font-size:1.38rem; margin:0 0 3px; letter-spacing:-.02em; }
+    .profile-card .role { color:var(--accent); font-size:.92rem; text-align:center; margin:0 0 14px; }
+    .profile-card .quote { text-align:center; margin:0; font-size:.91rem; color:#acc4d5; }
+    .stats { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin:0 auto 102px; }
+    .stat { padding:25px 23px; background:#111f31; border:1px solid #243a51; border-radius:15px; }
+    .stat strong { display:block; color:var(--accent); letter-spacing:-.04em; line-height:1.2; font-size:2.1rem; }
+    .stat span { display:block; margin-top:8px; color:#afc2d2; font-size:.83rem; }
+    .stat small { display:block; color:#819db3; margin-top:5px; font-size:.72rem; }
+    section { padding-block:42px; }
+    .section-head { max-width:820px; margin-bottom:32px; }
+    .kicker { color:var(--accent); font-size:.78rem; font-weight:800; letter-spacing:.12em; text-transform:uppercase; margin:0 0 10px; }
+    .section-head h2 { font-size:clamp(2rem,3.3vw,3.1rem); line-height:1.17; letter-spacing:-.045em; margin-bottom:11px; }
+    .section-head p { color:var(--muted); font-size:1rem; line-height:1.8; }
+    .card { background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); }
+    .featured { overflow:hidden; }
+    .project-media { overflow:hidden; background:#0e1c31; border-bottom:1px solid #294258; }
+    .project-media img { width:100%; aspect-ratio:2/1; object-fit:cover; object-position:center 36%; }
+    .feature-body { padding:30px; }
+    .pills { display:flex; gap:9px; flex-wrap:wrap; margin-bottom:13px; }
+    .pill { display:inline-block; font-size:.76rem; font-weight:750; color:#acd2f5; border:1px solid #315276; background:#172b43; padding:5px 10px; border-radius:99px; }
+    .pill.mint { color:#9bf2e2; background:rgba(29,110,103,.23); border-color:#2e706d; }
+    .feature-body h3 { font-size:clamp(1.65rem,2.65vw,2.45rem); margin-bottom:12px; line-height:1.15; letter-spacing:-.03em; }
+    .feature-body .intro { color:#b8cddd; max-width:940px; font-size:1rem; }
+    .three-col { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin:23px 0; }
+    .info { border:1px solid #2a4158; border-radius:13px; padding:18px; background:#112338; }
+    .info h4 { margin-bottom:7px; font-size:1rem; color:#b0f1e8; }
+    .info p { margin:0; color:#aabfd0; font-size:.89rem; }
+    .feature-body h4.subhead { font-size:1.07rem; margin:27px 0 14px; }
+    .agent-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:11px; margin-top:8px; }
+    .agent { background:linear-gradient(160deg,#1a3550,#15273b); border:1px solid #3a5971; border-radius:12px; padding:16px; }
+    .agent .step { width:30px; height:30px; display:grid; place-items:center; border-radius:8px; background:#284b58; color:#91eee0; font-size:.85rem; font-weight:850; margin-bottom:10px; }
+    .agent h5 { margin:0 0 6px; font-size:.88rem; }
+    .agent p { margin:0; font-size:.8rem; color:#a4bdd2; line-height:1.6; }
+    .note { margin:19px 0 0; color:#a6c5d4; padding:13px 16px; background:#102738; border-left:3px solid var(--accent); border-radius:0 8px 8px 0; font-size:.87rem; }
+    .project-actions { margin-top:25px; display:flex; gap:12px; flex-wrap:wrap; }
+    .project-actions .btn { min-width:165px; }
+    .smallcaps { font-size:.78rem; font-weight:800; text-transform:uppercase; letter-spacing:.09em; color:#6dddcf; }
+    .other-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
+    .other { padding:24px; }
+    .other h3 { margin:12px 0 9px; font-size:1.16rem; letter-spacing:-.02em; }
+    .other p { color:#a7bed0; font-size:.9rem; margin-bottom:16px; }
+    .other .tag { color:#8bf0dd; font-size:.75rem; font-weight:700; letter-spacing:.08em; }
+    .other .links { margin-top:15px; display:flex; gap:12px; flex-wrap:wrap; font-size:.83rem; }
+    .text-link { color:#8ecaff; font-weight:750; text-decoration:none; }
+    .about-grid { display:grid; grid-template-columns:1.1fr .9fr; gap:18px; }
+    .about-box { padding:29px; }
+    .about-box p { color:#b5c9d8; }
+    .about-box p:last-child { margin-bottom:0; }
+    .skill-items { display:flex; flex-wrap:wrap; gap:9px; margin-top:10px; }
+    .skill-items span { border:1px solid #365067; background:#152a40; border-radius:9px; padding:7px 10px; font-size:.81rem; color:#b9d7e8; }
+    .timeline { display:grid; gap:15px; }
+    .job { display:grid; grid-template-columns:205px 1fr; gap:20px; padding:26px; }
+    .job-period { color:var(--accent); font-size:.8rem; font-weight:800; padding-top:3px; }
+    .job h3 { font-size:1.17rem; line-height:1.35; margin:0 0 4px; }
+    .job .company { color:#9fc2d8; font-size:.88rem; margin-bottom:12px; }
+    .job ul { margin:0; padding-left:18px; color:#b1c7d7; font-size:.9rem; }
+    .job li + li { margin-top:6px; }
+    .education-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; }
+    .edu { padding:25px; }
+    .edu .years { color:var(--accent); font-size:.83rem; font-weight:750; }
+    .edu h3 { margin:7px 0 6px; font-size:1.21rem; }
+    .edu p { color:var(--muted); margin:0; font-size:.91rem; }
+    .cert-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:13px; }
+    .cert { padding:17px 20px; display:flex; gap:14px; align-items:flex-start; }
+    .cert .check { flex:0 0 24px; width:24px; height:24px; display:grid; place-items:center; background:#204638; border:1px solid #377f65; color:#9effd6; border-radius:50%; font-size:.79rem; font-weight:bold; }
+    .cert strong { display:block; font-size:.92rem; font-weight:750; line-height:1.45; }
+    .cert small { display:block; color:#a1b8cb; margin-top:3px; }
+    .awards { display:flex; gap:13px; flex-wrap:wrap; }
+    .award { flex:1; min-width:220px; padding:24px; }
+    .award h3 { color:#f7d998; font-size:1.1rem; margin:7px 0; }
+    .award p { color:#b4c7d5; font-size:.89rem; margin:0; }
+    .contact-card { margin-top:10px; padding:44px; display:flex; align-items:center; justify-content:space-between; gap:28px; background:linear-gradient(120deg,#123342,#132138 72%); }
+    .contact-card h2 { font-size:clamp(1.8rem,3vw,2.65rem); letter-spacing:-.04em; margin:0 0 9px; }
+    .contact-card p { max-width:560px; color:#aecbdc; margin:0; }
+    .contact-card .buttons { margin:0; }
+    footer { margin-top:70px; border-top:1px solid #294057; padding:30px 0 40px; }
+    .footer-grid { display:flex; justify-content:space-between; flex-wrap:wrap; gap:15px; color:#92a9be; font-size:.83rem; }
+    .footer-grid a { text-decoration:none; }
+
+    /* Autonomous Sourcing Agent — public case study */
+    .sourcing-feature { margin-top:25px; scroll-margin-top:98px; }
+    .sourcing-banner { padding:34px 34px 30px; background:linear-gradient(125deg,#0e3040 0%,#16273f 58%,#1b2c49 100%); border-bottom:1px solid #355369; }
+    .sourcing-banner-top { display:flex; justify-content:space-between; flex-wrap:wrap; align-items:center; gap:18px; margin-bottom:26px; }
+    .sourcing-banner .kicker { margin:0; }
+    .sourcing-banner-top .pill { margin:0; }
+    .sourcing-banner h3 { font-size:clamp(1.55rem,3vw,2.65rem); line-height:1.18; letter-spacing:-.04em; margin-bottom:8px; }
+    .sourcing-banner .summary { color:#bad5e1; margin:0 0 25px; max-width:850px; font-size:1rem; }
+    .sourcing-flow { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; }
+    .sourcing-node { position:relative; padding:15px 16px; border:1px solid rgba(101,205,205,.34); border-radius:12px; background:rgba(6,20,35,.45); }
+    .sourcing-node:not(:last-child)::after { content:'→'; position:absolute; top:50%; right:-11px; transform:translateY(-50%); color:#90e5d8; font-size:1.3rem; z-index:1; font-weight:800; }
+    .sourcing-node small { color:var(--accent); display:block; font-size:.71rem; font-weight:850; letter-spacing:.08em; text-transform:uppercase; margin-bottom:4px; }
+    .sourcing-node strong { font-size:.94rem; line-height:1.3; display:block; }
+    .sourcing-node span { font-size:.77rem; color:#a8c4d4; line-height:1.5; display:block; margin-top:4px; }
+    .sourcing-gates { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:11px; margin:14px 0 24px; }
+    .sourcing-gate { display:flex; align-items:flex-start; gap:10px; background:#172a3e; padding:15px; border:1px solid #355168; border-radius:12px; }
+    .sourcing-gate .gate-number { font-size:.73rem; font-weight:900; color:#072525; background:#79e6d9; flex-shrink:0; border-radius:7px; padding:4px 7px; }
+    .sourcing-gate strong { display:block; font-size:.88rem; }
+    .sourcing-gate p { margin:3px 0 0; color:#a5bccf; font-size:.8rem; line-height:1.5; }
+    .sourcing-bottom { background:#102438; border:1px solid #27445b; padding:17px 19px; border-radius:12px; margin:20px 0 0; }
+    .sourcing-bottom h4 { margin:0 0 6px; color:#c8fff4; }
+    .sourcing-bottom p { margin:0; color:#aac6d7; font-size:.9rem; }
+    .sourcing-metric { display:flex; flex-wrap:wrap; gap:10px; margin:15px 0 0; }
+    .sourcing-metric span { color:#a8d8ef; background:#132c45; border:1px solid #2d5268; border-radius:9px; font-size:.79rem; padding:6px 10px; }
+    @media(max-width:760px) { .sourcing-flow { grid-template-columns:repeat(2,1fr); } .sourcing-node::after { display:none; } .sourcing-gates { grid-template-columns:1fr; } .sourcing-banner { padding:25px 20px; } }
+    @media(max-width:460px) { .sourcing-flow { grid-template-columns:1fr; } }
+    @media(max-width:950px) { .hero { gap:32px; } .navlinks { gap:12px; } .stat { padding:18px; } .agent-grid { grid-template-columns:repeat(2,1fr); } }
+    @media(max-width:760px) {
+      .nav { height:auto; min-height:70px; padding:14px 0; flex-wrap:wrap; }
+      .brand { font-size:.95rem; }
+      .navlinks { width:100%; overflow-x:auto; gap:17px; padding-bottom:3px; }
+      .navlinks a { font-size:.8rem; white-space:nowrap; }
+      .hero { grid-template-columns:1fr; padding:55px 0 45px; }
+      .profile-card { max-width:450px; width:100%; margin:auto; }
+      .stats { grid-template-columns:repeat(2,1fr); margin-bottom:55px; }
+      .three-col,.other-grid,.about-grid,.education-grid,.cert-grid { grid-template-columns:1fr; }
+      .job { grid-template-columns:1fr; gap:6px; padding:20px; }
+      .contact-card { flex-direction:column; align-items:flex-start; padding:28px; }
+    }
+    @media(max-width:460px) { .container { width:min(var(--max),calc(100% - 28px)); } h1 { font-size:3rem; } .hero-meta { font-size:.8rem; } .agent-grid { grid-template-columns:1fr; } .feature-body { padding:20px; } .stat strong { font-size:1.6rem; } .buttons .btn { flex:1; } .profile-card { padding:22px; } }
+    @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .btn { transition:none; } }
+    @media print { .topbar,.buttons,.skip { display:none; } body { background:#fff; color:#111; } section,.card { break-inside:avoid; } }
+
+/* Shared styles for long-form product-management case studies */
+:root { --amber:#ffc785; }
+body.case-page { background:#08111f; }
+.case-hero { padding-top:70px; padding-bottom:42px; border-bottom:1px solid #284056; }
+.breadcrumb { display:flex; align-items:center; flex-wrap:wrap; gap:10px; color:#a6bbcd; font-size:.86rem; margin-bottom:33px; }
+.breadcrumb a { color:#b2d6ee; text-decoration:none; }
+.breadcrumb span[aria-current] { color:#74e6d5; }
+.case-hero h1 { font-size:clamp(2.9rem,5.25vw,5rem); max-width:980px; margin:16px 0 18px; }
+.case-hero .dek { max-width:880px; color:#b4c9dc; font-size:1.14rem; line-height:1.8; }
+.case-overview { display:flex; gap:10px; flex-wrap:wrap; margin:26px 0 5px; }
+.case-overview .pill { padding:7px 12px; }
+.case-status { margin:22px 0 0; font-size:.89rem; color:#a5bbcd; line-height:1.7; }
+.case-split { display:grid; grid-template-columns:220px minmax(0,1fr); gap:52px; align-items:start; padding:48px 0 30px; }
+.case-toc { position:sticky; top:110px; border:1px solid #29445a; background:#101e30; border-radius:16px; padding:22px 18px; }
+.case-toc h2 { margin:0 0 15px; color:#e8f6ff; font-size:.95rem; }
+.case-toc a { display:block; padding:8px 10px; border-left:2px solid transparent; color:#aabfd2; font-size:.84rem; line-height:1.3; text-decoration:none; }
+.case-toc a:hover,.case-toc a:focus { color:#92eedf; background:#152a3f; border-left-color:#65e3d1; }
+.case-main { min-width:0; }
+.case-section { border-bottom:1px solid #263d53; padding:18px 0 57px; margin-bottom:32px; scroll-margin-top:98px; }
+.case-section:last-child { border-bottom:0; }
+.case-section .kicker { margin-bottom:12px; }
+.case-section h2 { font-size:clamp(1.85rem,2.6vw,2.7rem); line-height:1.2; letter-spacing:-.035em; margin-bottom:18px; }
+.case-section h3 { font-size:1.16rem; margin:25px 0 12px; color:#e7f4fe; }
+.case-section p,.case-section li { color:#b2c7d7; }
+.case-section p { margin-bottom:15px; }
+.case-section ul,.case-section ol { padding-left:22px; margin:10px 0 18px; }
+.case-section li { margin-bottom:9px; }
+.case-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:15px; margin:24px 0; }
+.case-grid.three { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.case-tile { border:1px solid #2c465e; background:linear-gradient(152deg,#12263a,#101d2e); border-radius:16px; padding:23px; }
+.case-tile h3 { color:#aaf1e7; margin:0 0 8px; font-size:1.02rem; }
+.case-tile p { font-size:.9rem; line-height:1.68; margin:0; }
+.case-tile .mini { color:#7ec6dc; text-transform:uppercase; font-size:.71rem; font-weight:800; letter-spacing:.08em; margin-bottom:9px; }
+.case-callout { border-left:3px solid #64e1cc; border-radius:0 12px 12px 0; background:#123042; padding:18px 22px; margin:22px 0; color:#e3f3f7; }
+.case-callout strong { color:#a4ffed; }
+.case-callout p { margin:5px 0 0; color:#c4dae3; }
+.case-callout.warn { border-left-color:#edb977; background:#302819; }
+.case-callout.warn strong { color:#ffe1b6; }
+.case-callout.warn p { color:#e5ceae; }
+.case-flow { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin:22px 0; }
+.case-flow .node { padding:19px 16px; border-radius:14px; background:#132b40; border:1px solid #3b6879; position:relative; }
+.case-flow .node:not(:last-child):after { content:'→'; position:absolute; right:-13px; top:44%; color:#a6f0e5; font-size:1.25rem; font-weight:900; z-index:2; }
+.case-flow .node small { display:block; color:#78e2d5; font-size:.72rem; text-transform:uppercase; letter-spacing:.08em; font-weight:800; }
+.case-flow .node strong { color:#f0faff; display:block; font-size:.95rem; margin:7px 0; }
+.case-flow .node p { font-size:.82rem; line-height:1.52; margin:0; }
+.case-journey { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:9px; margin:24px 0; }
+.case-journey .stage { background:#132438; border:1px solid #304a62; border-radius:13px; padding:17px 14px; }
+.case-journey .stage:nth-child(3) { background:#173a42; border-color:#59beb6; }
+.case-journey .stage .number { color:#83ead9; font-size:.76rem; font-weight:900; }
+.case-journey .stage h3 { font-size:.95rem; margin:5px 0; }
+.case-journey .stage p { font-size:.79rem; line-height:1.62; margin:0; }
+.case-journey .stage .emphasis { color:#adf8eb; font-weight:700; }
+.case-timeline { border-left:2px solid #426878; margin:27px 0 20px 10px; padding-left:27px; }
+.case-timeline .point { position:relative; margin-bottom:25px; }
+.case-timeline .point::before { content:''; position:absolute; width:13px; height:13px; background:#7ae8d9; border:3px solid #112a3c; box-shadow:0 0 0 1px #7ae8d9; left:-36px; top:3px; border-radius:50%; }
+.case-timeline .point h3 { margin:0 0 6px; }
+.case-timeline .point p { margin:0; font-size:.92rem; }
+.case-metrics { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin:22px 0; }
+.case-metric { padding:21px; border:1px solid #31516b; border-radius:14px; background:#10283c; }
+.case-metric span { display:block; color:#8debdc; font-weight:800; font-size:.8rem; text-transform:uppercase; letter-spacing:.05em; }
+.case-metric strong { display:block; font-size:1.1rem; margin:8px 0 5px; color:#eaf7ff; }
+.case-metric p { font-size:.84rem; margin:0; }
+.case-links { display:flex; flex-wrap:wrap; gap:11px; margin-top:23px; }
+.case-section .small-note { font-size:.83rem; color:#92aabc; }
+.case-divider { display:block; height:1px; background:#284157; margin:25px 0; }
+.case-image { margin:23px 0; overflow:hidden; border:1px solid #335166; border-radius:16px; }
+.case-image img { width:100%; max-height:460px; object-fit:cover; object-position:center; }
+.case-image figcaption { background:#14293c; padding:9px 15px; font-size:.81rem; color:#a8c3d7; }
+.case-bottom-cta { background:linear-gradient(105deg,#153647,#17273d); padding:27px; border:1px solid #366373; border-radius:17px; margin:30px 0; }
+.case-bottom-cta h2 { font-size:1.5rem; margin:0 0 10px; }
+.case-bottom-cta p { color:#b3cbda; }
+.prototype-shell { background:#102135; border:1px solid #35566c; border-radius:18px; overflow:hidden; }
+.proto-top { background:#18334a; padding:22px 24px; display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; border-bottom:1px solid #355269; }
+.proto-top strong { font-size:1.04rem; }
+.proto-top span { color:#bdd7e1; font-size:.86rem; }
+.proto-inner { padding:26px; }
+.proto-progress { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:8px; margin-bottom:26px; }
+.proto-progress .step { background:#182d41; border-radius:10px; padding:9px 7px; border:1px solid #2d4960; color:#9bb3c7; text-align:center; font-size:.8rem; font-weight:750; }
+.proto-progress .step.active { background:#275a5a; border-color:#79e8d6; color:#edfffb; }
+.proto-progress .step.done { border-color:#439a8e; color:#9beadf; }
+.proto-panel h2 { margin:0 0 12px; font-size:1.65rem; }
+.proto-panel p { color:#bdd0de; }
+.proto-dialog { padding:22px; border:1px solid #355268; border-radius:14px; background:#0f1d30; margin:20px 0; }
+.proto-dialog .who { color:#79e2d7; text-transform:uppercase; font-weight:800; font-size:.76rem; letter-spacing:.06em; }
+.proto-dialog p { margin:8px 0 0; }
+.proto-table { width:100%; border-collapse:collapse; margin:18px 0; font-size:.92rem; }
+.proto-table th,.proto-table td { padding:13px 10px; text-align:left; border-bottom:1px solid #335066; }
+.proto-table th { color:#9bdedc; }
+.proto-table td { color:#bdd3e4; }
+.proto-nav { margin:27px 0 0; display:flex; flex-wrap:wrap; gap:11px; justify-content:space-between; }
+.proto-nav button { font:inherit; cursor:pointer; }
+.proto-nav button:disabled { opacity:.4; cursor:not-allowed; }
+.proto-choices { display:flex; flex-wrap:wrap; gap:10px; margin:15px 0; }
+.proto-choices label { border:1px solid #3c5b6d; border-radius:12px; padding:12px 17px; display:inline-flex; gap:9px; align-items:center; color:#d0e4f1; }
+.proto-choices input { accent-color:#58cfbb; }
+.proto-result { padding:19px; margin:18px 0; background:#123a40; border:1px solid #4d9f93; border-radius:13px; }
+.proto-result strong { color:#c3fff4; }
+.prototype-disclaimer { padding:17px 23px; background:#211f23; color:#e2cbb8; border-top:1px solid #514036; font-size:.84rem; }
+@media(max-width:1080px){.case-journey{grid-template-columns:repeat(3,minmax(0,1fr))}.case-flow{grid-template-columns:repeat(2,minmax(0,1fr))}.case-flow .node:after{display:none}.case-grid.three{grid-template-columns:1fr 1fr}}
+@media(max-width:830px){.case-split{grid-template-columns:1fr;gap:16px}.case-toc{position:static;display:flex;align-items:center;gap:8px;overflow-x:auto;padding:13px 14px}.case-toc h2{display:none}.case-toc a{border-left:0;border-bottom:2px solid transparent;white-space:nowrap}.case-toc a:hover{border-bottom-color:#65e3d1;border-left:0}.case-section{padding-bottom:40px}}
+@media(max-width:600px){.case-hero{padding-top:45px}.case-grid,.case-grid.three,.case-metrics,.case-flow,.case-journey{grid-template-columns:1fr}.proto-progress{grid-template-columns:repeat(5,minmax(0,1fr))}.proto-progress .step{font-size:.64rem;padding:10px 4px}.proto-inner{padding:17px}.proto-top{padding:16px}.case-hero .dek{font-size:1rem}}
+@media print {.case-toc{display:none}.case-split{display:block}.case-main{width:100%}.case-section{break-inside:avoid}}
+
+
+/* Cross-browser safety and layout fixes */
+[hidden] { display: none !important; }
+html { min-width: 0; }
+body { min-width: 0; overflow-wrap: break-word; }
+.hero > *, .case-split > *, .case-grid > *, .sourcing-flow > * { min-width: 0; }
+@media (max-width: 760px) {
+  .topbar .navlinks { scrollbar-width: thin; scrollbar-color: #497a88 transparent; }
+  .navlinks { -webkit-overflow-scrolling: touch; }
+  .btn { min-height: 44px; }
+}
+
+/* Spa case study custom elements */
+.spa-dashboard{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:22px 0;}
+.spa-kpi{padding:20px;border:1px solid #345467;background:#102c3d;border-radius:13px;}
+.spa-kpi .mini{color:#87d3c9;font-size:.73rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;}
+.spa-kpi strong{display:block;font-size:1.22rem;margin:7px 0;color:#e3fff6;}
+.spa-kpi p{color:#abc5d3;font-size:.86rem;margin:0;}
+.spa-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:9px;margin:18px 0;}
+.spa-steps div{background:#142d41;border:1px solid #355468;padding:15px;border-radius:11px;min-width:0;}
+.spa-steps small{font-size:.75rem;color:#6cddc9;font-weight:800;}
+.spa-steps strong{display:block;margin:5px 0;font-size:.98rem;}
+.spa-steps span{display:block;color:#a9c3d4;font-size:.79rem;}
+@media(max-width:920px){.spa-steps{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:600px){.spa-steps,.spa-dashboard{grid-template-columns:1fr}}
+</style></head>
+<body class="case-page"><a class="skip" href="#overview">Skip to content</a>
+<header class="topbar"><div class="container nav">
+<a aria-label="Portfolio homepage" class="brand" href="../../index.html"><span class="logo">SV</span><span>Sreenivas Vinnakota</span></a>
+<nav aria-label="Primary navigation" class="navlinks"><a href="../../index.html#projects">All projects</a><a href="../../index.html#experience">Experience</a><a href="../../index.html#contact">Contact</a><a class="mini-contact" href="https://www.linkedin.com/in/vasuart/" rel="noopener noreferrer" target="_blank">LinkedIn ↗</a></nav>
+</div></header>
+<div class="container"><header class="case-hero">
+<div class="breadcrumb"><a href="../../index.html">Portfolio</a> <span>›</span> <a href="../../index.html#projects">Projects</a> <span>›</span> <span aria-current="page">Spa &amp; Wellness AI</span></div>
+<p class="eyebrow"><span class="dot"></span> Case study 02 / Independent AI product prototype</p>
+<h1>Spa &amp; Wellness <span class="gradient-text">AI Business Advisor.</span></h1>
+<p class="dek">InsightFlow — a decision intelligence and AI governance concept for multi-location spa and salon businesses, translating trustworthy data into informed actions and measurable outcomes.</p>
+<div class="case-overview"><span class="pill">Conversational business intelligence</span><span class="pill">Salon analytics</span><span class="pill">Data freshness</span><span class="pill">AI governance</span><span class="pill">Hosted concept prototype</span></div>
+<div class="buttons"><a class="btn primary" href="https://spa-wellness-ai-deep-research.vercel.app/" rel="noopener noreferrer" target="_blank">Try live prototype ↗</a><a class="btn" href="../../assets/spa-wellness-ai-strategy-presentation.pdf" rel="noopener noreferrer" target="_blank">View presentation PDF ↗</a><a class="btn secondary" href="https://github.com/vasuart-cloud/Spa-wellness-AI-deep-research-" rel="noopener noreferrer" target="_blank">View code on GitHub ↗</a><a class="btn secondary" href="../../index.html#projects">← All projects</a></div>
+<p class="case-status"><strong>Project status:</strong> Independent prototype inspired by multi-location wellness analytics use cases. It is not an official Zenoti product or connected to customer production systems. Sample business data, financial modeling and demonstration outcomes are illustrative.</p>
+</header>
+<div class="case-split"><aside aria-label="Case study sections" class="case-toc"><h2>In this case study</h2><a href="#overview">Opportunity</a><a href="#discovery">Discovery</a><a href="#journey">User journey</a><a href="#architecture">Architecture</a><a href="#mvp">MVP choices</a><a href="#evaluation">Evaluation &amp; ROI</a><a href="#prototype">Prototype &amp; deck</a></aside>
+<main class="case-main">
+<section class="case-section" id="overview"><p class="kicker">01 / Product opportunity</p><h2>Trust the data. Act on what matters. Prove the value.</h2>
+<p>Salon and wellness operators need to grow profitable revenue across many locations while protecting margins. Typical reporting friction includes limited customization, uncertainty about data consistency, exporting several reports to Excel, and difficulty turning insights into a prioritized weekly plan.</p>
+<div class="case-grid three">
+<div class="case-tile"><div class="mini">Economic buyer</div><h3>Meera · COO</h3><p>Needs a trusted explanation of declining visits or profit, and evidence that interventions created real business value.</p></div>
+<div class="case-tile"><div class="mini">Decision maker</div><h3>Arjun · Regional Manager</h3><p>Needs to identify which centers require action, understand why, save the question and review fresh results each week.</p></div>
+<div class="case-tile"><div class="mini">Control owner</div><h3>Neha · Customer Admin</h3><p>Needs scoped access, safe sharing, explainable AI usage, cost budgets, error monitoring and the ability to pause automation.</p></div></div>
+<div class="case-callout"><strong>Positioning</strong><p>Go beyond another dashboard or generic chatbot. The value is an evidence-backed, repeatable decision workflow—trusted metric → relevant insight → human action → tested outcome.</p></div>
+<p class="small-note">Basis: independent InsightFlow GitHub project and the supplied 10-slide spa-and-wellness data-products strategy presentation. Selected public reviews in the deck illustrate reporting friction and should not be interpreted as defects in this independent prototype.</p>
+</section>
+<section class="case-section" id="discovery"><p class="kicker">02 / Product discovery</p><h2>Find where analytics breaks down for users.</h2>
+<div class="case-grid two"><div class="case-tile"><h3>Pain: unreliable context</h3><p>A numerical answer can be unhelpful when its metric definition or latest source period is unclear. Incorrect or stale alerts can erode trust quickly.</p></div>
+<div class="case-tile"><h3>Pain: repeated manual work</h3><p>Regional managers re-run similar reports, export data for reconciliation and repeatedly investigate the same centers.</p></div>
+<div class="case-tile"><h3>Pain: insight without action</h3><p>Knowing that repeat visits declined is not enough. Users need prioritized anomalies, likely drivers to check, accountable next steps and ways to observe results.</p></div>
+<div class="case-tile"><h3>Pain: governance at scale</h3><p>Enterprise administrators need tenant-aware permissions, cost visibility, safe scheduled delivery and audit logs rather than unbounded AI behavior.</p></div></div>
+<h3>Discovery hypotheses to validate</h3><ul><li>Showing <strong>data freshness and certified KPI definitions</strong> alongside explanations increases trust.</li><li>Saved weekly insights reduce repeated reporting effort and grow return usage.</li><li>Regional managers act more often when alerts connect a concrete anomaly to an owner and recommendation.</li><li>COOs will support a premium product only when measurable operational or financial lift exceeds its cost.</li></ul>
+</section>
+<section class="case-section" id="journey"><p class="kicker">03 / User journey</p><h2>From a question to a repeatable operating rhythm.</h2>
+<p>Arjun asks: <em>“Which salons are losing repeat customers, and what should I do this week?”</em> The product experience makes source quality explicit before suggesting an action.</p>
+<div class="spa-steps">
+<div><small>01</small><strong>Ask</strong><span>Ask a plain-language business question.</span></div>
+<div><small>02</small><strong>Explain</strong><span>Show verified KPI, timeframe, trend and potential drivers to check.</span></div>
+<div><small>03</small><strong>Save</strong><span>Persist centers, filters, definition and insight for reuse.</span></div>
+<div><small>04</small><strong>Refresh &amp; act</strong><span>Review scheduled updates and approve targeted actions.</span></div>
+<div><small>05</small><strong>Prove</strong><span>Track paid visits or margin against a suitable comparison group.</span></div></div>
+<div class="case-callout"><strong>The trust moment</strong><p>The Advisor should not claim causation from a correlation. For example, if repeat visits drop, it should suggest checking rebooking, capacity and service mix rather than inventing a single reason.</p></div>
+</section>
+<section class="case-section" id="architecture"><p class="kicker">04 / Solution &amp; architecture</p><h2>One reliable data foundation; three distinct user experiences.</h2>
+<div class="case-flow"><div class="node"><small>Stage 01</small><strong>Salon events</strong><p>Appointments, paid visits, cancellations, refunds, staff hours</p></div><div class="node"><small>Stage 02</small><strong>Trusted metrics</strong><p>Certified definitions, reconciled calculations, source age and permissions</p></div><div class="node"><small>Stage 03</small><strong>AI Business Advisor</strong><p>Investigate, explain, visualize, recommend, save &amp; refresh</p></div><div class="node"><small>Stage 04</small><strong>Governed decisions</strong><p>Manager review, admin policy, action tracking and outcome testing</p></div></div>
+<div class="case-grid two"><div class="case-tile"><h3>Business-facing experience</h3><p>Arjun receives detailed charts and operational priorities; Meera sees concise executive analysis and business-value context. Saved and scheduled insights create repeat usage.</p></div>
+<div class="case-tile"><h3>AI control tower</h3><p>Neha configures role and center scope, recipient policies, spend limits, safe sharing, traces, failures and suspension controls. Protecting tenant boundaries is a requirement for production, not something demonstrated by role switching alone.</p></div>
+<div class="case-tile"><h3>Cost-aware processing</h3><p>Use deterministic KPI calculation for standard requests, permission-aware reuse for repeated queries, and more expensive AI reasoning only when it adds value.</p></div>
+<div class="case-tile"><h3>Explainability and freshness</h3><p>Show both when source data was last updated and when an analysis ran. Block or label advice generated from sources beyond the defined freshness limit.</p></div></div>
+<p class="small-note">Technology concept in the public repository: React, TypeScript, Tailwind, charting, deterministic analytics and optional server-side AI integration. Diagram is a target architecture, not evidence of production-grade authentication or integrations.</p>
+</section>
+<section class="case-section" id="mvp"><p class="kicker">05 / MVP &amp; prioritization</p><h2>Ship one trusted, repeatable insight before expanding AI scope.</h2>
+<div class="case-grid two"><div class="case-tile"><div class="mini">MVP first</div><h3>Verified KPI + saved weekly insight</h3><p>Certify repeat visits, utilization and margin metrics. Give Arjun one useful regional insight he can save, refresh and review securely.</p></div>
+<div class="case-tile"><div class="mini">Next, if the first use case earns trust</div><h3>Alerts + action tracking</h3><p>Add thresholds for anomalies, clear ownership, admin controls and business-outcome instrumentation after false-alert risk is understood.</p></div>
+<div class="case-tile"><div class="mini">Deliberately excluded from first MVP</div><h3>No extra generic chatbot</h3><p>No new churn model, fully automated customer campaigns, or unrestricted file sharing before establishing KPI accuracy and adoption.</p></div>
+<div class="case-tile"><div class="mini">Commercial hypothesis</div><h3>Prove before monetizing</h3><p>Assess repeat usage, willingness to pay, incremental value and cost-to-serve in a controlled pilot, rather than treating AI response volume as success.</p></div></div>
+</section>
+<section class="case-section" id="evaluation"><p class="kicker">06 / Evaluation, governance &amp; ROI</p><h2>Evaluate decisions and trust—not just AI output volume.</h2>
+<div class="case-grid two"><div class="case-tile"><h3>Data and AI quality</h3><p>KPI reconciliation, source-age correctness, explanation faithfulness, low false-alert rate and transparent handling of unknown or missing data.</p></div>
+<div class="case-tile"><h3>Adoption and workflow</h3><p>Repeat users, saved-insight reuse, scheduled-refresh reliability, time to answer and actions reviewed or approved by regional managers.</p></div>
+<div class="case-tile"><h3>Safety and FinOps</h3><p>Permission checks, zero cross-tenant exposure, audit trail completeness, failure/retry control, cost per useful decision and token budgets.</p></div>
+<div class="case-tile"><h3>Business outcome</h3><p>Incremental paid visits and contribution margin after interventions, using a holdout or credible comparison to avoid claiming that correlation proves value.</p></div></div>
+<div class="spa-dashboard"><div class="spa-kpi"><div class="mini">Illustrative portfolio scenario</div><strong>20 salons × 900 visits/month</strong><p>216,000 completed paid visits per year as a modeling assumption.</p></div><div class="spa-kpi"><div class="mini">0.5% visit uplift scenario</div><strong>1,080 added visits</strong><p>At a hypothetical $95 ticket, $102,600 additional sales and $35,910 contribution at 35% margin.</p></div></div>
+<p class="small-note">All figures above are from the scenario in the supplied presentation. They are not measured customer performance, tested uplift or a revenue forecast. The presentation proposes a ≥95% pilot job-success gate and zero permission leaks; these are proposed acceptance criteria, not achieved results.</p>
+</section>
+<section class="case-section" id="prototype"><p class="kicker">07 / Explore the prototype</p><h2>See the experience, inspect the concept and read the strategy.</h2>
+<p>The hosted InsightFlow prototype demonstrates persona-based business intelligence and governance concepts with simulated salon business data. The presentation documents the industry problem framing, user stories, metric trust, product vision, roadmap and hypothetical financial case.</p>
+<div class="buttons"><a class="btn primary" href="https://spa-wellness-ai-deep-research.vercel.app/" rel="noopener noreferrer" target="_blank">Launch InsightFlow prototype ↗</a><a class="btn" href="../../assets/spa-wellness-ai-strategy-presentation.pdf" rel="noopener noreferrer" target="_blank">Open 10-slide presentation ↗</a><a class="btn secondary" download="" href="../../assets/spa-wellness-ai-strategy-presentation.pptx">Download PPTX ↓</a><a class="btn secondary" href="https://github.com/vasuart-cloud/Spa-wellness-AI-deep-research-" rel="noopener noreferrer" target="_blank">Explore GitHub repo ↗</a></div>
+<div class="case-callout"><strong>Professional portfolio disclosure</strong><p>This independently developed product concept is not affiliated with or endorsed by Zenoti. Public customer-review examples are discussed in the strategy presentation as contextual research, not as evidence of any issue in this prototype. No real customer data is included.</p></div>
+</section>
+</main></div></div>
+<footer><div class="container footer-grid"><span>© 2026 Sreenivas Vinnakota · Case study 02 · InsightFlow</span><span><a href="../../index.html">Portfolio home</a> · <a href="../../index.html#contact">Contact</a></span></div></footer>
+</body></html>
