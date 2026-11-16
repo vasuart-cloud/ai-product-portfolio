@@ -40,3 +40,10 @@ Claim accuracy: Sourcing workflow and its browser demo are labeled a concept/sim
 Portrait: The homepage uses your public GitHub avatar as a placeholder. To use your chosen photo, upload `assets/profile-photo.jpg` and change the hero image `src` in `index.html` to `assets/profile-photo.jpg`.
 Resume: The included publicly shareable PDF has its phone number redacted. Review the email and the remaining personal details before you publish it.
 Site security: The site is static, contains no secrets or API keys, and sends no visitor details to a backend. Enable two-factor authentication on GitHub and Enforce HTTPS on Pages. Any new AI-backed live demo should use a separate server with access control, rate limits, and server-side keys.
+
+
+## AI-Generated Integration Builder
+
+- Featured project 04: `projects/ai-generated-integration-builder/index.html` — developer pain points, supervised AI architecture, product journey, security, MVP and evaluation.
+- [Live prototype](https://ai-generated-integration-builder-three.vercel.app/) and [source repository](https://github.com/vasuart-cloud/AI-Generated-Integration-Builder).
+- Presentation: `projects/ai-generated-integration-builder/presentation.html` contains a five-slide text-based web overview and automatically opens the PDF when `assets/ai-generated-integration-builder-presentation.pdf` is uploaded. The source presentation describes seven agent stages; the current source README describes eight including the orchestrator. Both have three approval gates. The sandbox is simulated and production auto-deployment is out of scope.

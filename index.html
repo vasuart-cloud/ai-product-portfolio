@@ -5,7 +5,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="#08111f" name="theme-color"/>
-<meta content="Sreenivas Vinnakota AI Product Manager portfolio: Autonomous Sourcing Agent, InsightFlow Spa &amp; Wellness AI Decision Intelligence Copilot and Agentic Employee Records, with live prototypes and case studies." name="description"/>
+<meta content="Sreenivas Vinnakota AI Product Manager portfolio: Autonomous Sourcing Agent, InsightFlow Spa &amp; Wellness AI Decision Intelligence Copilot and Agentic Employee Records and AI-Generated Integration Builder, with live prototypes and case studies." name="description"/>
 <meta content="website" property="og:type"/>
 <meta content="Sreenivas Vinnakota · AI Product Manager" property="og:title"/>
 <meta content="Agentic AI, enterprise product strategy and working AI prototypes. Explore my projects, impact, and career." property="og:description"/>
@@ -218,6 +218,8 @@ body { min-width: 0; overflow-wrap: break-word; }
 #projects .case-studies-stack {display:grid;gap:26px;}
 #projects .case-study-panel {--case-accent:#64e1cf; display:grid;grid-template-columns:minmax(0,1.16fr) minmax(285px,.84fr);position:relative;isolation:isolate;min-width:0;overflow:hidden;border:1px solid #35536a;border-radius:22px;background:#101f31;box-shadow:0 12px 40px rgba(0,0,0,.14);scroll-margin-top:105px;}
 #projects .case-study-panel.case-wellness {--case-accent:#8bb7ff; background:#101f32;}
+#projects .case-study-panel.case-integration {--case-accent:#b6a8ff;background:#111f32;}
+#projects .integration-visual {background:radial-gradient(ellipse at 75% 25%,rgba(165,140,248,.16),transparent 62%),linear-gradient(125deg,#202842,#111b30);}
 #projects .case-study-panel.case-employee {--case-accent:#ecc393; background:#111f30;}
 #projects .case-study-content {padding:33px 33px 29px;min-width:0;}
 #projects .case-topline {display:flex;align-items:center;flex-wrap:wrap;gap:9px 13px;margin-bottom:16px;}
@@ -337,7 +339,7 @@ body { min-width: 0; overflow-wrap: break-word; }
   <div class="section-head featured-section-heading">
     <p class="kicker">01 / Featured case studies</p>
     <h2 id="featured-work-heading">From real business problems to purposeful AI products.</h2>
-    <p>Three projects, each with a clear customer problem, a proposed solution, and a working or illustrative prototype. Explore the strategy and product decisions behind each one.</p>
+    <p>Four projects, each with a clear customer problem, a proposed solution, and a working or illustrative prototype. Explore the strategy and product decisions behind each one.</p>
   </div>
 
   <div class="case-studies-stack">
@@ -422,6 +424,34 @@ body { min-width: 0; overflow-wrap: break-word; }
         <div class="employee-preview-image"><img src="assets/agentic-employee-records-cover.webp" alt="Agentic Employee Records product concept cover" loading="lazy" width="1392" height="783"></div>
         <div class="record-mini-flow"><span>Detect gaps</span><b>→</b><span>Explain why</span><b>→</b><span>Approve action</span></div>
         <p class="visual-bottom-note">Human confirmation and traceable policy evidence</p>
+      </aside>
+    </section>
+    <section class="case-study-panel case-integration" id="ai-generated-integration-builder" aria-labelledby="integration-title">
+      <div class="case-study-content">
+        <div class="case-topline"><span class="case-number">04</span><span class="case-domain">ENTERPRISE SAAS · AI DEVELOPER TOOLS</span><span class="case-status">Live prototype</span></div>
+        <h3 id="integration-title">AI-Generated Integration Builder</h3>
+        <p class="case-tagline">From API documentation to trustworthy integration code, with developers in control.</p>
+        <div class="case-definition">
+          <div class="case-definition-row"><strong>The problem</strong><p>Developers repeatedly build SaaS API clients, authentication, pagination, error handling and user/activity mappings, often from incomplete documentation.</p></div>
+          <div class="case-definition-row"><strong>My approach</strong><p>A supervised multi-agent workbench validates API evidence, generates editable TypeScript connectors, and requires three human approvals before simulated sandbox validation and export.</p></div>
+        </div>
+        <div class="case-keywords"><span>Agent orchestration</span><span>API integrations</span><span>Human-in-the-loop</span><span>AI guardrails</span></div>
+        <div class="case-actions">
+          <a class="btn primary" href="projects/ai-generated-integration-builder/">Explore case study ↗</a>
+          <a class="btn" href="https://ai-generated-integration-builder-three.vercel.app/" target="_blank" rel="noopener noreferrer">Try live prototype ↗</a>
+          <a class="case-text-link" href="projects/ai-generated-integration-builder/presentation.html" target="_blank" rel="noopener noreferrer">View presentation →</a>
+        </div>
+        <p class="case-footnote">Independent developer-workspace prototype; deterministic demo and simulated sandbox, not production deployment.</p>
+      </div>
+      <aside class="case-visual integration-visual" aria-label="Illustrative supervised integration workflow">
+        <div class="visual-eyebrow"><span class="visual-signal"></span> FROM API EVIDENCE TO REVIEW-READY CODE</div>
+        <div class="agent-flow-card">
+          <div class="mini-step"><span class="mini-step-num">01</span><div><strong>Validate API documentation</strong><small>HTTPS, OpenAPI or labeled demo fixture</small></div><span class="mini-arrow">↓</span></div>
+          <div class="mini-step"><span class="mini-step-num">02</span><div><strong>Discover capabilities &amp; plan</strong><small>Evidence, scopes and data mapping</small></div><span class="mini-arrow">↓</span></div>
+          <div class="mini-step"><span class="mini-step-num">03</span><div><strong>Generate and supervise</strong><small>Agent workflow · three approval gates</small></div><span class="mini-arrow">↓</span></div>
+          <div class="mini-step"><span class="mini-step-num">04</span><div><strong>Review, test &amp; export</strong><small>Editable TypeScript · traces · simulated sandbox</small></div><span class="mini-arrow">✓</span></div>
+        </div>
+        <p class="visual-bottom-note">Developer ownership · No fabricated usage data · No automatic deployment</p>
       </aside>
     </section>
   </div>
