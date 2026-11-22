@@ -35,7 +35,7 @@ Public Agentic Employee Records demo: https://agentic-employee-record.vercel.app
 LinkedIn: https://www.linkedin.com/in/vasuart/
 Independent project GitHub: https://github.com/vasuart-cloud/Agentic-Employee-Record
 Important publishing notes
-Privacy & intellectual property: The employer-facing Autonomous Sourcing Agent case study was rewritten as a high-level, generalized product concept. Original private PRDs and leadership decks are not in this package or linked publicly. Before posting, personally check that all descriptions, metrics, and examples are approved for disclosure.
+Privacy & intellectual property: The employer-facing Autonomous Sourcing Agent case study was rewritten as a high-level, generalized product concept. The Autonomous Sourcing Agent leadership deck is intentionally linked publicly at the user's request; private PRDs are not included. Before posting, personally check that all descriptions, metrics, and examples are approved for disclosure.
 Claim accuracy: Sourcing workflow and its browser demo are labeled a concept/simulation, not a production launch. Employee Records has a working public frontend prototype; its enterprise integrations and proposed outcomes are not represented as shipped. No specific pilot outcome is implied without proof.
 Portrait: The homepage uses your public GitHub avatar as a placeholder. To use your chosen photo, upload `assets/profile-photo.jpg` and change the hero image `src` in `index.html` to `assets/profile-photo.jpg`.
 Resume: The included publicly shareable PDF has its phone number redacted. Review the email and the remaining personal details before you publish it.
@@ -47,3 +47,9 @@ Site security: The site is static, contains no secrets or API keys, and sends no
 - Featured project 04: `projects/ai-generated-integration-builder/index.html` — developer pain points, supervised AI architecture, product journey, security, MVP and evaluation.
 - [Live prototype](https://ai-generated-integration-builder-three.vercel.app/) and [source repository](https://github.com/vasuart-cloud/AI-Generated-Integration-Builder).
 - Presentation: `projects/ai-generated-integration-builder/presentation.html` contains a five-slide text-based web overview and automatically opens the PDF when `assets/ai-generated-integration-builder-presentation.pdf` is uploaded. The source presentation describes seven agent stages; the current source README describes eight including the orchestrator. Both have three approval gates. The sandbox is simulated and production auto-deployment is out of scope.
+
+
+## Autonomous Sourcing Agent presentation
+
+- The 12-slide Autonomous Sourcing Agent product review deck is available as `assets/autonomous-sourcing-agent-product-review.pdf`.
+- The homepage project card and sourcing case study both include **View presentation** links to the exact uploaded PDF; the existing prototype and browser walkthrough links remain available.
