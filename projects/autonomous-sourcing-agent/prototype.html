@@ -11,7 +11,8 @@
   <style>
     .demo-wrap{max-width:970px;padding-top:60px;padding-bottom:65px}
     .demo-wrap h1{font-size:clamp(2.2rem,4vw,3.6rem)}
-    .proto-panel[hidden]{display:none}
+    /* Explicitly honor hidden on buttons: global .btn uses display:inline-flex, which otherwise overrides the browser's hidden style. */
+    .proto-panel[hidden],.proto-nav button[hidden],.proto-result[hidden]{display:none!important}
     .proto-field{display:flex;flex-direction:column;gap:6px;margin:16px 0}
     .proto-field input,.proto-field textarea{font:inherit;border:1px solid #496b81;color:#edf8ff;background:#0a1b2a;border-radius:9px;padding:10px 12px;width:100%}
     .proto-field label{font-size:.87rem;font-weight:700;color:#bfdbe9}
